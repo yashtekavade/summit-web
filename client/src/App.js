@@ -1,31 +1,32 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/header/Header";
-import Home from "./components/home/Home";
-import About from "./components/about/About";
-import Skills from "./components/skills/Skills";
-//import Work from "./components/Work/Work";
-import Contact from "./components/contact/Contact";
-import Inprogress from "./components/inprogress/inprogress";
-import Footer from "./components/footer/Footer";
-import Scroll from "./components/scroll/Scroll";
+import Navbar from "./Components/Navbar/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Sponsors from "./pages/Sponsors";
+import Sports from "./pages/Sports";
+import About from "./pages/About";
+import Guests from "./pages/Guests";
+import Register from "./pages/Register";
 
 const App = () => {
   return (
-    <>
-      <Header />
-
-      <main className="main">
-        <Home />
-        <About />
-        <Skills />
-        <Inprogress />
-        <Contact />
-      </main>
-
-      <Footer />
-      <Scroll />
-    </>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/sports" element={<Sports />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/guests" element={<Guests />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
