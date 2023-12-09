@@ -1,17 +1,19 @@
 .form-container {
     max-width: 400px;
     margin: auto;
+    font-family: 'Lato', bold;
 }
 
 .form-title {
+    margin-top: 2rem;
     text-align: center;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .form-label {
     margin-bottom: 12px;
-    font-size: 16px;
+    font-size: 18px;
     display: block;
 }
 
@@ -29,7 +31,7 @@
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 

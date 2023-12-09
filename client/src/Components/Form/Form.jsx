@@ -36,7 +36,18 @@ const Form = () => {
             onChange={handleInputChange}
             required
           >
-            {/* Options here */}
+            <option value="">Select Sports</option>
+            <option value="Football">Football</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Volleyball">Volleyball</option>
+            <option value="Kabaddi">Kabaddi</option>
+            <option value="Badminton">Badminton</option>
+            <option value="Table Tennis">Table Tennis</option>
+            <option value="Lawn Tennis">Lawn Tennis</option>
+            <option value="Chess">Chess</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Esports">Esports</option>
           </select>
         </label>
 
