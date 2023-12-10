@@ -22,7 +22,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Cricket</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#cricket-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -36,7 +36,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Football</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#football-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -50,7 +50,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Tabble Tennis</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#tabbletennis-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -64,7 +64,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Chess</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#chess-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -78,7 +78,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>BasketBall</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#basketball-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -92,7 +92,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Tennis</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#tennis-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -106,7 +106,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>VolleyBall</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#volleyball-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -120,7 +120,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Badminton</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#badminton-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -134,7 +134,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Swimming</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#swimming-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -148,7 +148,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Esports</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#esports-heading" class="sportscard-link">
               See More
             </a>
           </div>
@@ -162,7 +162,7 @@ const Cards = () => {
           </div>
           <div class="sportscard contentBx">
             <h2>Kabaddi</h2>
-            <a href="#" class="sportscard-link">
+            <a href="#kabaddi-heading" class="sportscard-link">
               See More
             </a>
           </div>
