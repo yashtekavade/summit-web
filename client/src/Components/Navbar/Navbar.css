@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   font-size: 20px;
 }
 .nav-link {
@@ -24,7 +24,7 @@
   margin-top: 1.7rem;
   margin-bottom: 1rem;
 
-  margin-right: 10rem;
+  margin-right: 55rem;
   background-repeat: no-repeat;
   height: 60px;
   justify-content: space-between;
