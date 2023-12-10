@@ -31,21 +31,6 @@ const Navbar = () => {
               Contact Us
             </Link>
           </div>
-          <div>
-            <Link to="/guests" className="nav-link">
-              Esteemed Guests
-            </Link>
-          </div>
-          <div>
-            <Link to="/sponsors" className="nav-link">
-              Sponsors
-            </Link>
-          </div>
-          <div>
-            <Link to="/about" className="nav-link">
-              About Us
-            </Link>
-          </div>
         </div>
         <div>
           {" "}
