@@ -56,3 +56,13 @@
 .form-input.player-input {
   margin-bottom: 12px;
 }
+
+.accommodation-message {
+  background-color: #f0f8ff; /* Light Blue */
+  padding: 10px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  border: 1px solid #91e0ff; /* Sky Blue */
+  border-radius: 5px;
+  color: #3c54a1; /* Navy */
+}

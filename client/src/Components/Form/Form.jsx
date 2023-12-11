@@ -6,9 +6,12 @@ const Form = () => {
     sports: "",
     collegeName: "",
     collegeType: "",
+    collegeCity: "",
+    collegeState: "",
+    accommodation: "",
     inchargeDetails: "",
     captainDetails: "",
-    esportsType: "", // Added esportsType field
+    esportsType: "",
     players: [],
   };
 
@@ -20,6 +23,13 @@ const Form = () => {
       ...formData,
       [name]: value,
     });
+
+    // Add logic for specific actions when accommodation is selected
+    if (name === "accommodation" && value === "Yes") {
+      console.log(
+        "A call will be made to sports head or sport captain regarding accommodation."
+      );
+    }
   };
 
   const handlePlayersInputChange = (index, e) => {
@@ -87,7 +97,7 @@ const Form = () => {
 
   return (
     <div className="form-container">
-      <h2 className="form-title">Sports Registration Form</h2>
+      <h2 className="form-title">Registration Form</h2>
       <form onSubmit={handleSubmit}>
         <label className="form-label">
           College Type:
@@ -118,31 +128,53 @@ const Form = () => {
         </label>
 
         <label className="form-label">
-          Sports Selection:
-          <select
-            className="form-select"
-            name="sports"
-            value={formData.sports}
+          College City:
+          <input
+            className="form-input"
+            type="text"
+            name="collegeCity"
+            value={formData.collegeCity}
             onChange={handleInputChange}
             required
-          >
-            <option value="">Select Sports</option>
-            <option value="Football">Football</option>
-            <option value="Cricket">Cricket</option>
-            <option value="Basketball">Basketball</option>
-            <option value="Volleyball">Volleyball</option>
-            <option value="Kabaddi">Kabaddi</option>
-            <option value="Badminton">Badminton</option>
-            <option value="Table Tennis">Table Tennis</option>
-            <option value="Lawn Tennis">Lawn Tennis</option>
-            <option value="Chess">Chess</option>
-            <option value="Swimming">Swimming</option>
-            <option value="Esports">Esports</option>
-          </select>
+          />
         </label>
 
         <label className="form-label">
-          Sports Incharge Details:
+          College State:
+          <input
+            className="form-input"
+            type="text"
+            name="collegeState"
+            value={formData.collegeState}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+
+        <label className="form-label">
+          Accommodation Required:
+          <select
+            className="form-select"
+            name="accommodation"
+            value={formData.accommodation}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="">Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+
+        {formData.accommodation === "Yes" && (
+          <div className="accommodation-message">
+            A call will be made to sports head or sport captain regarding
+            accommodation.
+          </div>
+        )}
+
+        <label className="form-label">
+          Sports Head:
           <input
             className="form-input"
             type="text"
@@ -154,7 +186,40 @@ const Form = () => {
         </label>
 
         <label className="form-label">
-          Captain Details:
+          Sports Selection:
+          <select
+            className="form-select"
+            name="sports"
+            value={formData.sports}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="">Select Sports</option>
+            <option value="Football Men">Football (M)</option>
+            <option value="Football Women">Football (W)</option>
+            <option value="Cricket Men">Cricket (M)</option>
+            <option value="Basketball Men">Basketball (M)</option>
+            <option value="Basketball Women">Basketball (W)</option>
+            <option value="Volleyball Men">Volleyball (M)</option>
+            <option value="Volleyball Women">Volleyball (W)</option>
+            <option value="Kabaddi Men">Kabaddi (M)</option>
+            <option value="Kabaddi Women">Kabaddi (W)</option>
+            <option value="Badminton Men">Badminton (M)</option>
+            <option value="Badminton Women">Badminton (W)</option>
+            <option value="Table Tennis Men">Table Tennis (M)</option>
+            <option value="Table Tennis Women">Table Tennis (W)</option>
+            <option value="Lawn Tennis Men">Lawn Tennis (M)</option>
+            <option value="Lawn Tennis Women">Lawn Tennis (W)</option>
+            <option value="Chess Men">Chess (M)</option>
+            <option value="Chess Women">Chess (W)</option>
+            <option value="Swimming Men">Swimming (M)</option>
+            <option value="Swimming Women">Swimming (W)</option>
+            <option value="Esports">Esports</option>
+          </select>
+        </label>
+
+        <label className="form-label">
+          Captain Name:
           <input
             className="form-input"
             type="text"
@@ -165,33 +230,44 @@ const Form = () => {
           />
         </label>
 
-        {formData.sports === "Football" && generatePlayerInputs(18, "Football")}
-        {formData.sports === "Cricket" && generatePlayerInputs(16, "Cricket")}
-        {formData.sports === "Basketball" &&
-          generatePlayerInputs(12, "Basketball")}
-        {formData.sports === "Volleyball" &&
-          generatePlayerInputs(12, "Volleyball")}
-        {formData.sports === "Kabaddi" && generatePlayerInputs(12, "Kabaddi")}
-        {formData.sports === "Badminton" && (
-          <>
-            {generatePlayerInputs(6, "Badminton Men")}
-            {generatePlayerInputs(4, "Badminton Women")}
-          </>
-        )}
-        {formData.sports === "Table Tennis" && (
-          <>
-            {generatePlayerInputs(5, "Table Tennis Men")}
-            {generatePlayerInputs(4, "Table Tennis Women")}
-          </>
-        )}
-        {formData.sports === "Chess" && generatePlayerInputs(6, "Chess")}
-        {formData.sports === "Lawn Tennis" && (
-          <>
-            {generatePlayerInputs(4, "Lawn Tennis Men")}
-            {generatePlayerInputs(4, "Lawn Tennis Women")}
-          </>
-        )}
-        {formData.sports === "Swimming" && generatePlayerInputs(4, "Swimming")}
+        {formData.sports === "Cricket Men" &&
+          generatePlayerInputs(16, "Cricket Men")}
+        {formData.sports === "Football Men" &&
+          generatePlayerInputs(18, "Football Men")}
+        {formData.sports === "Football Women" &&
+          generatePlayerInputs(18, "Football Women")}
+        {formData.sports === "Basketball Men" &&
+          generatePlayerInputs(12, "Basketball Men")}
+        {formData.sports === "Basketball Women" &&
+          generatePlayerInputs(12, "Basketball Women")}
+        {formData.sports === "Volleyball Men" &&
+          generatePlayerInputs(12, "Volleyball Men")}
+        {formData.sports === "Volleyball Women" &&
+          generatePlayerInputs(12, "Volleyball Women")}
+        {formData.sports === "Kabaddi Men" &&
+          generatePlayerInputs(12, "Kabaddi Men")}
+        {formData.sports === "Kabaddi Women" &&
+          generatePlayerInputs(12, "Kabaddi Women")}
+        {formData.sports === "Badminton Men" &&
+          generatePlayerInputs(6, "Badminton Men")}
+        {formData.sports === "Badminton Women" &&
+          generatePlayerInputs(4, "Badminton Women")}
+        {formData.sports === "Table Tennis Men" &&
+          generatePlayerInputs(5, "Table Tennis Men")}
+        {formData.sports === "Table Tennis Women" &&
+          generatePlayerInputs(4, "Table Tennis Women")}
+        {formData.sports === "Lawn Tennis Men" &&
+          generatePlayerInputs(4, "Lawn Tennis Men")}
+        {formData.sports === "Lawn Tennis Women" &&
+          generatePlayerInputs(4, "Lawn Tennis Women")}
+        {formData.sports === "Chess Men" &&
+          generatePlayerInputs(6, "Chess Men")}
+        {formData.sports === "Chess Women" &&
+          generatePlayerInputs(6, "Chess Women")}
+        {formData.sports === "Swimming Men" &&
+          generatePlayerInputs(4, "Swimming Men")}
+        {formData.sports === "Swimming Women" &&
+          generatePlayerInputs(4, "Swimming Women")}
         {formData.sports === "Esports" && (
           <>
             <label className="form-label">
