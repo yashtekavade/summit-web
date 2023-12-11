@@ -12,7 +12,7 @@ import Register from "./pages/Register";
 const App = () => {
   return (
     <Router>
-      <div className="myapp">
+      <div data-scroll className="myapp">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

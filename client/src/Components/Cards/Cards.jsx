@@ -15,7 +15,7 @@ import Kabaddi from "../../assets/ICONS/Artboard11.png";
 
 const Cards = () => {
   return (
-    <div className="cardbody">
+    <div data-scroll className="cardbody">
       <div className="sportscard container">
         <div className="sportscard card">
           <div className="sportscard imgBx">

@@ -5,7 +5,7 @@ import Preview from "../Components/Sportpreview/Sportpreview";
 import "../App.css";
 const sports = () => {
   return (
-    <div className="sports-page">
+    <div data-scroll className="sports-page">
       <Heading></Heading>
       <Cards></Cards>
       <Preview></Preview>
