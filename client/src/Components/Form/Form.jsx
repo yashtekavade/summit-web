@@ -203,7 +203,6 @@ const Form = () => {
             <option value="Volleyball Men">Volleyball (M)</option>
             <option value="Volleyball Women">Volleyball (W)</option>
             <option value="Kabaddi Men">Kabaddi (M)</option>
-            <option value="Kabaddi Women">Kabaddi (W)</option>
             <option value="Badminton Men">Badminton (M)</option>
             <option value="Badminton Women">Badminton (W)</option>
             <option value="Table Tennis Men">Table Tennis (M)</option>
@@ -246,8 +245,6 @@ const Form = () => {
           generatePlayerInputs(12, "Volleyball Women")}
         {formData.sports === "Kabaddi Men" &&
           generatePlayerInputs(12, "Kabaddi Men")}
-        {formData.sports === "Kabaddi Women" &&
-          generatePlayerInputs(12, "Kabaddi Women")}
         {formData.sports === "Badminton Men" &&
           generatePlayerInputs(6, "Badminton Men")}
         {formData.sports === "Badminton Women" &&

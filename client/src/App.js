@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Sports from "./pages/Sports";
 
 import Register from "./pages/Register";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/sports" element={<Sports />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

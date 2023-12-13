@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import fp1 from "../../assets/BRAND-ELEMENTS/fp1.png";
+import fp1 from "../../assets/brand/fp1.png";
 import logo from "../../assets/LOGO/logo.png";
 const Navbar = () => {
   return (
@@ -33,7 +33,6 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          {" "}
           <img source={fp1} className="img"></img>
         </div>
       </div>

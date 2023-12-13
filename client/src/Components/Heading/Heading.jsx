@@ -1,6 +1,6 @@
 import React from "react";
 import "./Heading.css";
-import b1 from "../../assets/images/b1.JPG";
+import b1 from "../../assets/images/1.jpg";
 
 const Heading = () => {
   return (
