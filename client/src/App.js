@@ -3,12 +3,18 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import FootballRegistration from "./pages/Registrationpages/FootballRegistration";
+import Guests from "./pages/Guests.jsx";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact.jsx";
+
 import Sports from "./pages/Sports";
 
+import About from "./Components/about/About.jsx";
+import Message from "./Components/about/Message.jsx";
+import Org from "./Components/about/org-team.jsx";
+import Head from "./Components/about/EventHead.jsx";
+
 import Register from "./pages/Register";
+import FootballRegistration from "./pages/Registrationpages/FootballRegistration";
 import ChessMenRegistration from "./pages/Registrationpages/ChessMenRegistration";
 
 const App = () => {
@@ -18,9 +24,17 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/executive-message" element={<Message />} />
+          <Route path="/organising-team" element={<Org />} />
+          <Route path="/event-head" element={<Head />} />
+
+          <Route path="/guest" element={<Guests />} />
+
           <Route path="/register" element={<Register />} />
           <Route path="/sports" element={<Sports />} />
-          <Route path="/contact" element={<Contact />} />
+
           <Route path="/Cricket(M)" element={<Register sport="Cricket(M)" />} />
           <Route
             path="register/Football(M)"

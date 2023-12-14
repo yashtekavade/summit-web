@@ -1,4 +1,4 @@
-// guests.jsx
+// Guests.jsx
 import React from "react";
 import esteemedGuestsPhoto from "../assets/images/guest.jpg";
 import Footer from "../Components/Footer/Footer";
