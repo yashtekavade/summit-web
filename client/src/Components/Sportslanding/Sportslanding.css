@@ -1,0 +1,28 @@
+.sports-landing-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .sports-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sports-list li {
+    margin: 10px;
+    width: 150px; /* Adjust the width as needed */
+  }
+  
+  .sports-list li a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    font-weight: bold;
+  }
+  
+  .sports-list li a:hover {
+    text-decoration: underline;
+  }
+  

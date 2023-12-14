@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-const Form = () => {
   const initialFormData = {
     sports: "",
     collegeName: "",
@@ -48,9 +47,8 @@ const Form = () => {
     console.log("Form submitted:", formData);
     // Add additional logic for form submission, validation, etc.
   };
-
-  const generatePlayerInputs = (count, category) => {
-    const playerInputs = [];
+  
+  const playerInputs = [];
     for (let i = 0; i < count; i++) {
       playerInputs.push(
         <div key={i}>
@@ -184,9 +182,6 @@ const Form = () => {
             required
           />
         </label>
-
-        <label className="form-label">
-          Sports Selection:
           <select
             className="form-select"
             name="sports"
@@ -215,7 +210,7 @@ const Form = () => {
             <option value="Swimming Women">Swimming (W)</option>
             <option value="Esports">Esports</option>
           </select>
-        </label>
+        </label> */}
 
         <label className="form-label">
           Captain Name:
