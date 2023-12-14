@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "../../Components/Form/Form";
 
-const FootballRegistration = ({ sport }) => {
+const TableTennisWRegistration = ({ sport }) => {
   return (
     <div>
       <div>
@@ -12,4 +12,4 @@ const FootballRegistration = ({ sport }) => {
   );
 };
 
-export default FootballRegistration;
+export default TableTennisWRegistration;

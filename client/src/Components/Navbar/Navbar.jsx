@@ -2,15 +2,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/LOGO/logo.png";
+import logo from "../../assets/LOGO/mixedd.png";
 
 const Navbar = () => {
   return (
     <div>
       <div className="navbar-body">
-        <img className="navbar-img" src={logo} alt="Logo"></img>
+        <Link to="/">
+          <img className="navbar-img" src={logo} alt="Logo" />
+        </Link>
 
         <div className="navbar-contents">
+          {/*
           <div>
             <Link to="/" className="nav-link">
               Home
@@ -59,7 +62,7 @@ const Navbar = () => {
             <Link to="/sports" className="nav-link">
               Sports
             </Link>
-          </div>
+  </div>*/}
           <div>
             <Link to="/register" className="nav-link register-button">
               Register Now

@@ -1,72 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar.jsx";
+
 import "./Sportslanding.css";
+
+const SportsCard = ({ title, link }) => {
+  return (
+    <div className="sports-card">
+      <h3>{title}</h3>
+      <Link to={link}>Register</Link>
+    </div>
+  );
+};
+
 const Sportslanding = () => {
   return (
-    <div className="sports-landing-container">
-      <h2>Select a Sport:</h2>
-      <ul className="sports-list">
-        <li>
-          <Link to="/register/Cricket(M)">Cricket (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Football(M)">Football (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Football(W)">Football (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/Basketball(M)">Basketball (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Basketball(W)">Basketball (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/Volleyball(M)">Volleyball (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Volleyball(W)">Volleyball (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/Kabaddi">Kabaddi (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Badminton(M)">Badminton (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Badminton(W)">Badminton (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/TableTennis(M)">Table Tennis (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/TableTennis(W)">Table Tennis (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/LawnTennis(M)">Lawn Tennis (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/LawnTennis(W)">Lawn Tennis (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/Chess(M)">Chess (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Chess(W)">Chess (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/Swimming(M)">Swimming (M)</Link>
-        </li>
-        <li>
-          <Link to="/register/Swimming(W)">Swimming (W)</Link>
-        </li>
-        <li>
-          <Link to="/register/Esports_BGMI">Esports BGMI</Link>
-        </li>
-        <li>
-          <Link to="/register/Esports_Valorant">Esports Valorant</Link>
-        </li>
-      </ul>
+    <div>
+      <Navbar />
+      <div className="sports-landing-container">
+        <h2>Select a Sport</h2>
+        <div className="sports-list">
+          <SportsCard title="Cricket (M)" link="/register/Cricket(M)" />
+          <SportsCard title="Football (M)" link="/register/Football(M)" />
+          <SportsCard title="Football (W)" link="/register/Football(W)" />
+          <SportsCard title="Basketball (M)" link="/register/Basketball(M)" />
+          <SportsCard title="Basketball (W)" link="/register/Basketball(W)" />
+          <SportsCard title="Volleyball (M)" link="/register/Volleyball(M)" />
+          <SportsCard title="Volleyball (W)" link="/register/Volleyball(W)" />
+          <SportsCard title="Kabaddi (M)" link="/register/Kabaddi" />
+          <SportsCard title="Badminton (M)" link="/register/Badminton(M)" />
+          <SportsCard title="Badminton (W)" link="/register/Badminton(W)" />
+          <SportsCard
+            title="Table Tennis (M)"
+            link="/register/TableTennis(M)"
+          />
+          <SportsCard
+            title="Table Tennis (W)"
+            link="/register/TableTennis(W)"
+          />
+          <SportsCard title="Lawn Tennis (M)" link="/register/LawnTennis(M)" />
+          <SportsCard title="Lawn Tennis (W)" link="/register/LawnTennis(W)" />
+          <SportsCard title="Chess (M)" link="/register/Chess(M)" />
+          <SportsCard title="Chess (W)" link="/register/Chess(W)" />
+          <SportsCard title="Swimming (M)" link="/register/Swimming(M)" />
+          <SportsCard title="Swimming (W)" link="/register/Swimming(W)" />
+          <SportsCard title="Esports BGMI" link="/register/Esports_BGMI" />
+          <SportsCard
+            title="Esports Valorant"
+            link="/register/Esports_Valorant"
+          />
+        </div>
+      </div>
     </div>
   );
 };
