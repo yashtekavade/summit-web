@@ -69,8 +69,9 @@
 
 /* Styles for the Register Now button */
 .nav-link.register-button {
+  margin-right: 2rem;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background-color: #3498db;
   color: white;
   border-radius: 5px;

@@ -166,6 +166,18 @@ const Form = (props) => {
       <h2 className="form-title">Registration Form</h2>
       <form onSubmit={handleSubmit}>
         <label className="form-label">
+          College Name:
+          <input
+            className="form-input"
+            type="text"
+            name="collegeName"
+            value={formData.collegeName}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+
+        <label className="form-label">
           College Type:
           <select
             className="form-select"
@@ -179,18 +191,6 @@ const Form = (props) => {
             <option value="Government College">Government College</option>
             <option value="Engineering College">Engineering College</option>
           </select>
-        </label>
-
-        <label className="form-label">
-          College Name:
-          <input
-            className="form-input"
-            type="text"
-            name="collegeName"
-            value={formData.collegeName}
-            onChange={handleInputChange}
-            required
-          />
         </label>
 
         <label className="form-label">
@@ -251,6 +251,18 @@ const Form = (props) => {
           />
         </label>
 
+        <label className="form-label">
+          Captain Name:
+          <input
+            className="form-input"
+            type="text"
+            name="captainDetails"
+            value={formData.captainDetails}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+
         {/* <label className="form-label">
           Select Sports
           <select
@@ -285,18 +297,6 @@ const Form = (props) => {
         </label> */}
 
         {renderPlayerInputs()}
-
-        <label className="form-label">
-          Captain Name:
-          <input
-            className="form-input"
-            type="text"
-            name="captainDetails"
-            value={formData.captainDetails}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
 
         {/* {formData.sports === "Esports" && (
           <>

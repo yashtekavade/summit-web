@@ -1,0 +1,79 @@
+/* Add this to your CSS file */
+
+/* Styles for the image section */
+.landscape-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.landscape-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Additional styling for the content next to the image */
+.landscape-section div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Change the color based on your design */
+}
+
+/* Add margin for the content */
+.landscape-section div p {
+  margin: 10px;
+}
+
+/* Add styles for the subsequent sections */
+section {
+  max-width: 1100px; /* Adjust the max-width as needed */
+  margin: 110px auto;
+  padding: 20px;
+}
+
+/* Add styles for the h2 in each section */
+section h2 {
+  color: #333; /* Change the color based on your design */
+}
+
+/* Add styles for the p in each section */
+section p {
+  margin-bottom: 15px;
+}
+
+/* Add styles for the Footer component (if needed) */
+/* Assuming it's not included in the provided code */
+/* You need to create styles for Footer component separately */
+
+/* Example of styles for Footer component */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* Home.css */
+.statistics-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.statistics-box {
+  text-align: center;
+}
+
+.statistics-box h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.statistics-box p {
+  margin: 0;
+}
