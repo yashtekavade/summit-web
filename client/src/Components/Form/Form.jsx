@@ -1,29 +1,6 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-const sportsPlayerCount = {
-  "Cricket(M)": 16,
-  "Football(M)": 18,
-  "Football(W)": 18,
-  "Basketball(M)": 12,
-  "Basketball(W)": 12,
-  "Volleyball(M)": 12,
-  "Volleyball(W)": 12,
-  Kabaddi: 12,
-  "Badminton(M)": 6,
-  "Badminton(W)": 6,
-  "Table Tennis(M)": 5,
-  "Table Tennis(W)": 4,
-  "Lawn Tennis(M)": 4,
-  "Lawn Tennis(W)": 4,
-  "Chess(M)": 6,
-  "Chess(W)": 6,
-  "Swimming(M)": 6,
-  "Swimming(W)": 6,
-  Esports_BGMI: 4,
-  Esports_Valorant: 5,
-};
-
 const Form = () => {
   const initialFormData = {
     sports: "",
@@ -34,9 +11,8 @@ const Form = () => {
     accommodation: "",
     inchargeDetails: "",
     captainDetails: "",
-    playerName1: "",
-    playerEmail1: "",
-    playerPhone1: "",
+    esportsType: "",
+    players: [],
   };
 
   const [formData, setFormData] = useState({ ...initialFormData });
@@ -48,28 +24,23 @@ const Form = () => {
       [name]: value,
     });
 
+    // Add logic for specific actions when accommodation is selected
     if (name === "accommodation" && value === "Yes") {
       console.log(
         "A call will be made to sports head or sport captain regarding accommodation."
       );
     }
+  };
 
-    // Reset player details when sports selection changes
-    if (name === "sports") {
-      const playerCount = sportsPlayerCount[value];
-      const newPlayerDetails = {};
+  const handlePlayersInputChange = (index, e) => {
+    const { name, value } = e.target;
+    const newPlayers = [...formData.players];
+    newPlayers[index][name] = value;
 
-      for (let i = 1; i <= playerCount; i++) {
-        newPlayerDetails[`playerName${i}`] = "";
-        newPlayerDetails[`playerEmail${i}`] = "";
-        newPlayerDetails[`playerPhone${i}`] = "";
-      }
-
-      setFormData({
-        ...formData,
-        ...newPlayerDetails,
-      });
-    }
+    setFormData({
+      ...formData,
+      players: newPlayers,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -78,86 +49,50 @@ const Form = () => {
     // Add additional logic for form submission, validation, etc.
   };
 
-  const renderPlayerInputs = () => {
-    const sport = formData.sports;
-    const playerCount = sportsPlayerCount[sport];
-
-    if (!playerCount || playerCount <= 0) {
-      return null;
-    }
-
+  const generatePlayerInputs = (count, category) => {
     const playerInputs = [];
-
-    for (let i = 1; i <= playerCount; i++) {
+    for (let i = 0; i < count; i++) {
       playerInputs.push(
         <div key={i}>
           <label className="form-label">
-            Player {i} Name:
+            {category} Player {i + 1} Name:
             <input
               className="form-input"
               type="text"
-              name={`playerName${i}`}
-              value={formData[`playerName${i}`]}
-              onChange={handleInputChange}
+              name={`playerName-${category}-${i}`}
+              value={formData.players[i]?.name || ""}
+              onChange={(e) => handlePlayersInputChange(i, e)}
               required
             />
           </label>
 
           <label className="form-label">
-            Player {i} Email:
+            {category} Player {i + 1} Email:
             <input
               className="form-input"
               type="email"
-              name={`playerEmail${i}`}
-              value={formData[`playerEmail${i}`]}
-              onChange={handleInputChange}
+              name={`playerEmail-${category}-${i}`}
+              value={formData.players[i]?.email || ""}
+              onChange={(e) => handlePlayersInputChange(i, e)}
               required
             />
           </label>
 
           <label className="form-label">
-            Player {i} Phone No:
+            {category} Player {i + 1} Phone:
             <input
               className="form-input"
               type="tel"
-              name={`playerPhone${i}`}
-              value={formData[`playerPhone${i}`]}
-              onChange={handleInputChange}
+              name={`playerPhone-${category}-${i}`}
+              value={formData.players[i]?.phone || ""}
+              onChange={(e) => handlePlayersInputChange(i, e)}
               required
             />
           </label>
         </div>
       );
     }
-
     return playerInputs;
-  };
-  const handleSportsChange = (e) => {
-    const { name, value } = e.target;
-
-    // Update the state only for the sports selection
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-
-    // Reset player details when sports selection changes
-    if (name === "sports") {
-      const playerCount = sportsPlayerCount[value];
-      const newPlayerDetails = {};
-
-      for (let i = 1; i <= playerCount; i++) {
-        newPlayerDetails[`playerName${i}`] = "";
-        newPlayerDetails[`playerEmail${i}`] = "";
-        newPlayerDetails[`playerPhone${i}`] = "";
-      }
-
-      // Update the state with the new player details
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        ...newPlayerDetails,
-      }));
-    }
   };
 
   return (
@@ -179,6 +114,7 @@ const Form = () => {
             <option value="Engineering College">Engineering College</option>
           </select>
         </label>
+
         <label className="form-label">
           College Name:
           <input
@@ -190,6 +126,7 @@ const Form = () => {
             required
           />
         </label>
+
         <label className="form-label">
           College City:
           <input
@@ -201,6 +138,7 @@ const Form = () => {
             required
           />
         </label>
+
         <label className="form-label">
           College State:
           <input
@@ -212,6 +150,7 @@ const Form = () => {
             required
           />
         </label>
+
         <label className="form-label">
           Accommodation Required:
           <select
@@ -226,12 +165,14 @@ const Form = () => {
             <option value="No">No</option>
           </select>
         </label>
+
         {formData.accommodation === "Yes" && (
           <div className="accommodation-message">
             A call will be made to sports head or sport captain regarding
             accommodation.
           </div>
         )}
+
         <label className="form-label">
           Sports Head:
           <input
@@ -243,13 +184,14 @@ const Form = () => {
             required
           />
         </label>
+
         <label className="form-label">
-          Select Sports
+          Sports Selection:
           <select
             className="form-select"
             name="sports"
             value={formData.sports}
-            onChange={handleSportsChange}
+            onChange={handleInputChange}
             required
           >
             <option value="">Select Sports</option>
@@ -261,7 +203,6 @@ const Form = () => {
             <option value="Volleyball Men">Volleyball (M)</option>
             <option value="Volleyball Women">Volleyball (W)</option>
             <option value="Kabaddi Men">Kabaddi (M)</option>
-            <option value="Kabaddi Women">Kabaddi (W)</option>
             <option value="Badminton Men">Badminton (M)</option>
             <option value="Badminton Women">Badminton (W)</option>
             <option value="Table Tennis Men">Table Tennis (M)</option>
@@ -275,7 +216,7 @@ const Form = () => {
             <option value="Esports">Esports</option>
           </select>
         </label>
-        {renderPlayerInputs()}
+
         <label className="form-label">
           Captain Name:
           <input
@@ -287,6 +228,7 @@ const Form = () => {
             required
           />
         </label>
+
         {formData.sports === "Cricket Men" &&
           generatePlayerInputs(16, "Cricket Men")}
         {formData.sports === "Football Men" &&
@@ -303,8 +245,6 @@ const Form = () => {
           generatePlayerInputs(12, "Volleyball Women")}
         {formData.sports === "Kabaddi Men" &&
           generatePlayerInputs(12, "Kabaddi Men")}
-        {formData.sports === "Kabaddi Women" &&
-          generatePlayerInputs(12, "Kabaddi Women")}
         {formData.sports === "Badminton Men" &&
           generatePlayerInputs(6, "Badminton Men")}
         {formData.sports === "Badminton Women" &&
@@ -337,13 +277,18 @@ const Form = () => {
                 required
               >
                 <option value="">Select Esports Type</option>
-                <option value="Esports_Valorant">Valorant</option>
-                <option value="Esports_BGMI">BGMI</option>
+                <option value="Valorant">Valorant</option>
+                <option value="BGMI">BGMI</option>
               </select>
             </label>
+
+            {formData.esportsType === "Valorant" &&
+              generatePlayerInputs(5, "Esports Valorant")}
+            {formData.esportsType === "BGMI" &&
+              generatePlayerInputs(4, "Esports BGMI")}
           </>
-        )}{" "}
-        */}
+        )}
+
         <button className="form-button" type="submit">
           Submit
         </button>
