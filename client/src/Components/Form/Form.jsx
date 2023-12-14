@@ -1,6 +1,30 @@
 import React, { useState } from "react";
 import "./Form.css";
 
+const sportsPlayerCount = {
+  "Cricket(M)": 16,
+  "Football(M)": 18,
+  "Football(W)": 18,
+  "Basketball(M)": 12,
+  "Basketball(W)": 12,
+  "Volleyball(M)": 12,
+  "Volleyball(W)": 12,
+  Kabaddi: 12,
+  "Badminton(M)": 6,
+  "Badminton(W)": 6,
+  "Table Tennis(M)": 5,
+  "Table Tennis(W)": 4,
+  "Lawn Tennis(M)": 4,
+  "Lawn Tennis(W)": 4,
+  "Chess(M)": 6,
+  "Chess(W)": 6,
+  "Swimming(M)": 6,
+  "Swimming(W)": 6,
+  Esports_BGMI: 4,
+  Esports_Valorant: 5,
+};
+
+const Form = (props) => {
   const initialFormData = {
     sports: "",
     collegeName: "",
@@ -10,8 +34,9 @@ import "./Form.css";
     accommodation: "",
     inchargeDetails: "",
     captainDetails: "",
-    esportsType: "",
-    players: [],
+    playerName1: "",
+    playerEmail1: "",
+    playerPhone1: "",
   };
 
   const [formData, setFormData] = useState({ ...initialFormData });
@@ -23,23 +48,28 @@ import "./Form.css";
       [name]: value,
     });
 
-    // Add logic for specific actions when accommodation is selected
     if (name === "accommodation" && value === "Yes") {
       console.log(
         "A call will be made to sports head or sport captain regarding accommodation."
       );
     }
-  };
 
-  const handlePlayersInputChange = (index, e) => {
-    const { name, value } = e.target;
-    const newPlayers = [...formData.players];
-    newPlayers[index][name] = value;
+    // Reset player details when sports selection changes
+    if (name === "sports") {
+      const playerCount = sportsPlayerCount[value];
+      const newPlayerDetails = {};
 
-    setFormData({
-      ...formData,
-      players: newPlayers,
-    });
+      for (let i = 1; i <= playerCount; i++) {
+        newPlayerDetails[`playerName${i}`] = "";
+        newPlayerDetails[`playerEmail${i}`] = "";
+        newPlayerDetails[`playerPhone${i}`] = "";
+      }
+
+      setFormData({
+        ...formData,
+        ...newPlayerDetails,
+      });
+    }
   };
 
   const handleSubmit = (e) => {
@@ -47,50 +77,88 @@ import "./Form.css";
     console.log("Form submitted:", formData);
     // Add additional logic for form submission, validation, etc.
   };
-  
-  const playerInputs = [];
-    for (let i = 0; i < count; i++) {
+
+  const renderPlayerInputs = () => {
+    const sport = props.sport; // Use props.sport instead of formData.sports
+    const playerCount = sportsPlayerCount[sport];
+
+    if (!playerCount || playerCount <= 0) {
+      return null;
+    }
+
+    const playerInputs = [];
+
+    for (let i = 1; i <= playerCount; i++) {
       playerInputs.push(
         <div key={i}>
           <label className="form-label">
-            {category} Player {i + 1} Name:
+            Player {i} Name:
             <input
               className="form-input"
               type="text"
-              name={`playerName-${category}-${i}`}
-              value={formData.players[i]?.name || ""}
-              onChange={(e) => handlePlayersInputChange(i, e)}
+              name={`playerName${i}`}
+              value={formData[`playerName${i}`]}
+              onChange={handleInputChange}
               required
             />
           </label>
 
           <label className="form-label">
-            {category} Player {i + 1} Email:
+            Player {i} Email:
             <input
               className="form-input"
               type="email"
-              name={`playerEmail-${category}-${i}`}
-              value={formData.players[i]?.email || ""}
-              onChange={(e) => handlePlayersInputChange(i, e)}
+              name={`playerEmail${i}`}
+              value={formData[`playerEmail${i}`]}
+              onChange={handleInputChange}
               required
             />
           </label>
 
           <label className="form-label">
-            {category} Player {i + 1} Phone:
+            Player {i} Phone No:
             <input
               className="form-input"
               type="tel"
-              name={`playerPhone-${category}-${i}`}
-              value={formData.players[i]?.phone || ""}
-              onChange={(e) => handlePlayersInputChange(i, e)}
+              name={`playerPhone${i}`}
+              value={formData[`playerPhone${i}`]}
+              onChange={handleInputChange}
               required
             />
           </label>
         </div>
       );
     }
+
     return playerInputs;
+  };
+
+  const handleSportsChange = (e) => {
+    const { name, value } = e.target;
+
+    // Update the state only for the sports selection
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    // Reset player details when sports selection changes
+    if (name === "sports") {
+      const playerCount = sportsPlayerCount[value];
+      const newPlayerDetails = {};
+
+      for (let i = 1; i <= playerCount; i++) {
+        newPlayerDetails[`playerName${i}`] = "";
+        newPlayerDetails[`playerEmail${i}`] = "";
+        newPlayerDetails[`playerPhone${i}`] = "";
+      }
+
+      // Update the state with the new player details
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        ...newPlayerDetails,
+      }));
+    }
   };
 
   return (
@@ -182,35 +250,41 @@ import "./Form.css";
             required
           />
         </label>
+
+        {/* <label className="form-label">
+          Select Sports
           <select
             className="form-select"
             name="sports"
             value={formData.sports}
-            onChange={handleInputChange}
+            onChange={handleSportsChange}
             required
           >
             <option value="">Select Sports</option>
-            <option value="Football Men">Football (M)</option>
-            <option value="Football Women">Football (W)</option>
-            <option value="Cricket Men">Cricket (M)</option>
-            <option value="Basketball Men">Basketball (M)</option>
-            <option value="Basketball Women">Basketball (W)</option>
-            <option value="Volleyball Men">Volleyball (M)</option>
-            <option value="Volleyball Women">Volleyball (W)</option>
-            <option value="Kabaddi Men">Kabaddi (M)</option>
-            <option value="Badminton Men">Badminton (M)</option>
-            <option value="Badminton Women">Badminton (W)</option>
-            <option value="Table Tennis Men">Table Tennis (M)</option>
-            <option value="Table Tennis Women">Table Tennis (W)</option>
-            <option value="Lawn Tennis Men">Lawn Tennis (M)</option>
-            <option value="Lawn Tennis Women">Lawn Tennis (W)</option>
-            <option value="Chess Men">Chess (M)</option>
-            <option value="Chess Women">Chess (W)</option>
-            <option value="Swimming Men">Swimming (M)</option>
-            <option value="Swimming Women">Swimming (W)</option>
-            <option value="Esports">Esports</option>
+            <option value="Football(M)">Football (M)</option>
+            <option value="Football(W)">Football (W)</option>
+            <option value="Cricket(M)">Cricket (M)</option>
+            <option value="Basketball(M)">Basketball (M)</option>
+            <option value="Basketball(W)">Basketball (W)</option>
+            <option value="Volleyball(M)">Volleyball (M)</option>
+            <option value="Volleyball(W)">Volleyball (W)</option>
+            <option value="Kabaddi">Kabaddi (M)</option>
+            <option value="Badminton(M)">Badminton (M)</option>
+            <option value="Badminton(W)">Badminton (W)</option>
+            <option value="Table Tennis(M)">Table Tennis (M)</option>
+            <option value="Table Tennis(W)">Table Tennis (W)</option>
+            <option value="Lawn Tennis(M)">Lawn Tennis (M)</option>
+            <option value="Lawn Tennis(W)">Lawn Tennis (W)</option>
+            <option value="Chess(M)">Chess (M)</option>
+            <option value="Chess(W)">Chess (W)</option>
+            <option value="Swimming(M)">Swimming (M)</option>
+            <option value="Swimming(W)">Swimming (W)</option>
+            <option value="Esports_Valorant">Esports-Valorant</option>
+            <option value="Esports_BGMI">Esports-BGMI</option>
           </select>
         </label> */}
+
+        {renderPlayerInputs()}
 
         <label className="form-label">
           Captain Name:
@@ -224,43 +298,7 @@ import "./Form.css";
           />
         </label>
 
-        {formData.sports === "Cricket Men" &&
-          generatePlayerInputs(16, "Cricket Men")}
-        {formData.sports === "Football Men" &&
-          generatePlayerInputs(18, "Football Men")}
-        {formData.sports === "Football Women" &&
-          generatePlayerInputs(18, "Football Women")}
-        {formData.sports === "Basketball Men" &&
-          generatePlayerInputs(12, "Basketball Men")}
-        {formData.sports === "Basketball Women" &&
-          generatePlayerInputs(12, "Basketball Women")}
-        {formData.sports === "Volleyball Men" &&
-          generatePlayerInputs(12, "Volleyball Men")}
-        {formData.sports === "Volleyball Women" &&
-          generatePlayerInputs(12, "Volleyball Women")}
-        {formData.sports === "Kabaddi Men" &&
-          generatePlayerInputs(12, "Kabaddi Men")}
-        {formData.sports === "Badminton Men" &&
-          generatePlayerInputs(6, "Badminton Men")}
-        {formData.sports === "Badminton Women" &&
-          generatePlayerInputs(4, "Badminton Women")}
-        {formData.sports === "Table Tennis Men" &&
-          generatePlayerInputs(5, "Table Tennis Men")}
-        {formData.sports === "Table Tennis Women" &&
-          generatePlayerInputs(4, "Table Tennis Women")}
-        {formData.sports === "Lawn Tennis Men" &&
-          generatePlayerInputs(4, "Lawn Tennis Men")}
-        {formData.sports === "Lawn Tennis Women" &&
-          generatePlayerInputs(4, "Lawn Tennis Women")}
-        {formData.sports === "Chess Men" &&
-          generatePlayerInputs(6, "Chess Men")}
-        {formData.sports === "Chess Women" &&
-          generatePlayerInputs(6, "Chess Women")}
-        {formData.sports === "Swimming Men" &&
-          generatePlayerInputs(4, "Swimming Men")}
-        {formData.sports === "Swimming Women" &&
-          generatePlayerInputs(4, "Swimming Women")}
-        {formData.sports === "Esports" && (
+        {/* {formData.sports === "Esports" && (
           <>
             <label className="form-label">
               Esports Type:
@@ -272,17 +310,12 @@ import "./Form.css";
                 required
               >
                 <option value="">Select Esports Type</option>
-                <option value="Valorant">Valorant</option>
-                <option value="BGMI">BGMI</option>
+                <option value="Esports_Valorant">Valorant</option>
+                <option value="Esports_BGMI">BGMI</option>
               </select>
             </label>
-
-            {formData.esportsType === "Valorant" &&
-              generatePlayerInputs(5, "Esports Valorant")}
-            {formData.esportsType === "BGMI" &&
-              generatePlayerInputs(4, "Esports BGMI")}
           </>
-        )}
+        )} */}
 
         <button className="form-button" type="submit">
           Submit
