@@ -4,11 +4,11 @@ import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import Sports from "./pages/Sports";
-
+import Guests from "./pages/Guests";
 import Register from "./pages/Register";
 import Footer from "./Components/Footer/Footer";
+import About from "./Components/Home/About";
 
 const App = () => {
   return (
@@ -17,9 +17,10 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/sports" element={<Sports />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/guests" element={<Guests />} />
         </Routes>
         <Footer />
       </div>
