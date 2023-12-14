@@ -13,7 +13,7 @@ import About from "./Components/Home/About";
 const App = () => {
   return (
     <Router>
-      <div>
+      <div data-scroll className="myapp">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

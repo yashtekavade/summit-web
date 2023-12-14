@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Cards.css";
 import Cricket from "../../assets/ICONS/Artboard1.png";
 import Football from "../../assets/ICONS/Artboard2.png";
@@ -14,157 +15,157 @@ import Kabaddi from "../../assets/ICONS/Artboard11.png";
 
 const Cards = () => {
   return (
-    <div className="cardbody">
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+    <div data-scroll className="cardbody">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Cricket} alt="Cricket" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Cricket</h2>
-            <a href="#cricket-heading" class="sportscard-link">
+            <Link to="cricket-heading" className="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Football} alt="Football" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Football</h2>
-            <a href="#football-heading" class="sportscard-link">
+            <Link to="football-heading" className="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={TabbleTennis} alt="TabbleTennis" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Tabble Tennis</h2>
-            <a href="#tabbletennis-heading" class="sportscard-link">
+            <Link to="tabbletennis-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Chess} alt="Chess" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Chess</h2>
-            <a href="#chess-heading" class="sportscard-link">
+            <Link to="chess-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Basketball} alt="BasketBall" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>BasketBall</h2>
-            <a href="#basketball-heading" class="sportscard-link">
+            <Link to="basketball-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Tennis} alt="Tennis" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Tennis</h2>
-            <a href="#tennis-heading" class="sportscard-link">
+            <Link to="tennis-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Volleyball} alt="VolleyBall" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>VolleyBall</h2>
-            <a href="#volleyball-heading" class="sportscard-link">
+            <Link to="volleyball-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Badminton} alt="Badminton" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Badminton</h2>
-            <a href="#badminton-heading" class="sportscard-link">
+            <Link to="badminton-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Swimming} alt="Swimming" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Swimming</h2>
-            <a href="#swimming-heading" class="sportscard-link">
+            <Link to="swimming-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Esports} alt="Esports" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Esports</h2>
-            <a href="#esports-heading" class="sportscard-link">
+            <Link to="esports-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="sportscard container">
-        <div class="sportscard card">
-          <div class="sportscard imgBx">
+      <div className="sportscard container">
+        <div className="sportscard card">
+          <div className="sportscard imgBx">
             <img src={Kabaddi} alt="Kabaddi" />
           </div>
-          <div class="sportscard contentBx">
+          <div className="sportscard contentBx">
             <h2>Kabaddi</h2>
-            <a href="#kabaddi-heading" class="sportscard-link">
+            <Link to="kabaddi-heading" class="sportscard-link">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
