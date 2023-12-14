@@ -24,7 +24,7 @@ const sportsPlayerCount = {
   Esports_Valorant: 5,
 };
 
-const Form = () => {
+const Form = (props) => {
   const initialFormData = {
     sports: "",
     collegeName: "",
@@ -79,7 +79,7 @@ const Form = () => {
   };
 
   const renderPlayerInputs = () => {
-    const sport = formData.sports;
+    const sport = props.sport; // Use props.sport instead of formData.sports
     const playerCount = sportsPlayerCount[sport];
 
     if (!playerCount || playerCount <= 0) {
@@ -132,6 +132,7 @@ const Form = () => {
 
     return playerInputs;
   };
+
   const handleSportsChange = (e) => {
     const { name, value } = e.target;
 
@@ -250,7 +251,7 @@ const Form = () => {
           />
         </label>
 
-        <label className="form-label">
+        {/* <label className="form-label">
           Select Sports
           <select
             className="form-select"
@@ -281,7 +282,7 @@ const Form = () => {
             <option value="Esports_Valorant">Esports-Valorant</option>
             <option value="Esports_BGMI">Esports-BGMI</option>
           </select>
-        </label>
+        </label> */}
 
         {renderPlayerInputs()}
 
