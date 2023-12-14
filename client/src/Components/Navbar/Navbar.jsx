@@ -2,13 +2,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import fp1 from "../../assets/BRAND-ELEMENTS/fp1.png";
 import logo from "../../assets/LOGO/logo.png";
+
 const Navbar = () => {
   return (
     <div>
       <div className="navbar-body">
-        <img className="navbar-img" src={logo}></img>
+        <img className="navbar-img" src={logo} alt="Logo"></img>
 
         <div className="navbar-contents">
           <div>
@@ -16,10 +16,44 @@ const Navbar = () => {
               Home
             </Link>
           </div>
+          <div className="dropdown">
+            <span className="nav-link">About ▼</span>
+            <div className="dropdown-content">
+              <Link to="/about" className="dropdown-link">
+                About Summit
+              </Link>
+              <Link to="/executive-message" className="dropdown-link">
+                Executive President Message
+              </Link>
+              <Link to="/organising-team" className="dropdown-link">
+                Organising Team
+              </Link>
+              <Link to="/event-head" className="dropdown-link">
+                Event Head
+              </Link>
+            </div>
+          </div>
           <div>
-            <Link to="/register" className="nav-link">
-              Register Now
+            <Link to="/guests" className="nav-link">
+              Guests
             </Link>
+          </div>
+          <div className="dropdown">
+            <span className="nav-link">Participants ▼</span>
+            <div className="dropdown-content">
+              <Link to="/registration-fees" className="dropdown-link">
+                Registration Fees
+              </Link>
+              <Link to="/instructions" className="dropdown-link">
+                Instructions
+              </Link>
+              <Link to="/accommodation" className="dropdown-link">
+                Accommodation
+              </Link>
+              <Link to="/covid-guidelines" className="dropdown-link">
+                COVID-19 Guidelines
+              </Link>
+            </div>
           </div>
           <div>
             <Link to="/sports" className="nav-link">
@@ -27,14 +61,10 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Link to="/contact" className="nav-link">
-              Contact Us
+            <Link to="/register" className="nav-link register-button">
+              Register Now
             </Link>
           </div>
-        </div>
-        <div>
-          {" "}
-          <img source={fp1} className="img"></img>
         </div>
       </div>
     </div>

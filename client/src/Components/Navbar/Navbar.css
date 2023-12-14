@@ -1,33 +1,82 @@
+/* Updated styles for the navbar */
 .navbar-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
-}
-.navbar-contents {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-
-  margin-left: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  font-size: 20px;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem; /* Add padding for spacing */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /* Set background color */
+  z-index: 1000; /* Ensure the navbar appears above other elements */
 }
+
+.navbar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* Reduce the gap between navbar items */
+  font-size: 16px; /* Reduce font size */
+}
+
 .nav-link {
   text-decoration: none;
   color: black;
   font-family: "Lato", bold;
 }
+
 .navbar-img {
   margin-top: 1.7rem;
   margin-bottom: 1rem;
+  margin-right: 2rem; /* Adjust margin for logo */
+  height: 40px;
+  transform: scale(2); /* Adjust logo scale */
+}
 
-  margin-right: 55rem;
-  background-repeat: no-repeat;
-  height: 60px;
-  justify-content: space-between;
-  align-items: center;
-  transform: scale(2.5);
+/* Styles for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 160px;
+  border-radius: 5px; /* Add border-radius for a rounded appearance */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Styles for the Register Now button */
+.nav-link.register-button {
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link.register-button:hover {
+  background-color: #2980b9;
 }
