@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import FootballRegistration from "./pages/Registrationpages/FootballRegistration";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
+import Contact from "./pages/Contact.jsx";
 import Sports from "./pages/Sports";
 
 import Register from "./pages/Register";
