@@ -103,12 +103,24 @@ const Sportslanding = () => {
           />
           <SportsCard
             title="Swimming Men"
-            subtitle="Rs. 300/- Per head, per event ; Rs. 500/- Per Relay"
+            subtitle={
+              <>
+                Rs. 300/- Event;
+                <br />
+                Rs. 500/- Relay
+              </>
+            }
             link="/register/Swimming(W)"
           />
           <SportsCard
             title="Swimming Women"
-            subtitle="Rs. 300/- Per head, per event ; Rs. 500/- Per Relay"
+            subtitle={
+              <>
+                Rs. 300/- Event;
+                <br />
+                Rs. 500/- Relay
+              </>
+            }
             link="/register/Swimming(W)"
           />
           <SportsCard

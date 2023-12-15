@@ -1,7 +1,8 @@
 import React from "react";
 import CountUp from "react-countup";
 import Footer from "../Components/Footer/Footer.jsx";
-import post from "../assets/images/post.jpg";
+import post from "../assets/images/postt.jpg";
+import about from "../assets/images/aboutt.png";
 import Navbar from "../Components/Navbar/Navbar.jsx";
 import "./Home.css";
 
@@ -13,7 +14,10 @@ function Home() {
         <section className="landscape-section">
           <img src={post} alt="Landscape" />
         </section>
-        <div className="statistics-container">
+        <section className="about-section">
+          <img src={about} alt="Landscape" />
+        </section>
+        {/*<div className="statistics-container">
           <div className="statistics-box">
             <h3>
               <CountUp start={0} end={11} duration={2} />
@@ -61,10 +65,10 @@ function Home() {
             MIT World Peace University, the Flagship University of MAEER’s MIT
             Group of Institutions, is carrying forward the legacy of four
             decades of Educational Excellence...
-            {/* (Add the rest of the message) */}
+            {/* (Add the rest of the message) 
           </p>
         </section>
-        {/* Add Events section if needed */}
+         Add Events section if needed */}
         <Footer />
       </div>
     </div>
