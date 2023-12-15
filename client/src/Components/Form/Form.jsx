@@ -185,7 +185,7 @@ const Form = (props) => {
       <h2 className="form-title">Registration Form</h2>
       <form onSubmit={handleSubmit}>
         <label className="form-label">
-          College Name:
+          College Name: <span className="required-field">*</span>
           <input
             className="form-input"
             type="text"
@@ -197,7 +197,7 @@ const Form = (props) => {
         </label>
 
         <label className="form-label">
-          College Type:
+          College Type: <span className="required-field">*</span>
           <select
             className="form-select"
             name="collegeType"
@@ -213,7 +213,7 @@ const Form = (props) => {
         </label>
 
         <label className="form-label">
-          College City:
+          College City: <span className="required-field">*</span>
           <input
             className="form-input"
             type="text"
@@ -225,7 +225,7 @@ const Form = (props) => {
         </label>
 
         <label className="form-label">
-          College State:
+          College State: <span className="required-field">*</span>
           <input
             className="form-input"
             type="text"
@@ -237,7 +237,7 @@ const Form = (props) => {
         </label>
 
         <label className="form-label">
-          Accommodation Required:
+          Accommodation Required: <span className="required-field">*</span>
           <select
             className="form-select"
             name="accommodation"
@@ -259,7 +259,7 @@ const Form = (props) => {
         )}
 
         <label className="form-label">
-          Sports Head:
+          Sports Head: <span className="required-field">*</span>
           <input
             className="form-input"
             type="text"
@@ -271,7 +271,7 @@ const Form = (props) => {
         </label>
 
         <label className="form-label">
-          Captain Name:
+          Captain Name: <span className="required-field">*</span>
           <input
             className="form-input"
             type="text"
@@ -340,19 +340,24 @@ const Form = (props) => {
           className="form-button"
           type="button"
           onClick={() => {
-            window.location.href = "https://paytm.me/s3EQ-xk";
+            // Replace 'https://paytm.me/s3EQ-xk' with your actual payment URL
+            const paymentUrl = "https://paytm.me/s3EQ-xk";
+
+            // Open the payment URL in a new window
+            window.open(paymentUrl, "_blank");
           }}
         >
           Pay Now
         </button>
 
         <label className="form-label">
-          Upload Image:
+          Upload Image: <span className="required-field">*</span>
           <input
             className="form-input"
             type="file"
             accept="image/*"
             onChange={handleImageUpload}
+            required
           />
         </label>
 

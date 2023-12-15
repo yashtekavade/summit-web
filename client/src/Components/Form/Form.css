@@ -1,7 +1,7 @@
 .form-container {
   max-width: 400px;
-  margin: 30px auto;
-  font-family: "Lato", sans-serif;
+  margin: 130px auto;
+  font-family: "Poppins", sans-serif;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -68,61 +68,7 @@
   color: #3c54a1; /* Navy */
 }
 
-/* Additional styles for payment link and image upload */
-.form-label.payment-label,
-.form-label.image-label {
-  margin-bottom: 8px;
-  font-size: 16px;
-  display: block;
-}
-
-.form-input.payment-input,
-.form-input.image-input {
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  width: 100%;
-}
-
-/* Styles for the image upload input */
-.form-input.image-input {
-  overflow: hidden;
-}
-
-/* Additional styles for payment button */
-.form-label.payment-button-label {
-  margin-bottom: 8px;
-  font-size: 16px;
-  display: block;
-}
-
-.form-input.payment-button-input {
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  width: 100%;
-}
-
-/* Additional styles for player inputs */
-.form-label.player-label {
-  margin-bottom: 4px;
-  font-size: 14px;
-}
-
-.form-input.player-input {
-  margin-bottom: 12px;
-}
-
-.accommodation-message {
-  background-color: #f0f8ff; /* Light Blue */
-  padding: 10px;
-  margin-top: -15px;
-  margin-bottom: 10px;
-  border: 1px solid #91e0ff; /* Sky Blue */
-  border-radius: 5px;
-  color: #3c54a1; /* Navy */
+.required-field {
+  color: red;
+  margin-left: 4px; /* Adjust the spacing as needed */
 }
