@@ -74,7 +74,19 @@ const Form = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    // Create a FormData object to handle both text and image data
+    const formDataWithImage = new FormData();
+
+    // Append text data
+    Object.entries(formData).forEach(([key, value]) => {
+      formDataWithImage.append(key, value);
+    });
+
+    // Append image data
+    formDataWithImage.append("image", image);
+
+    console.log("Form submitted:", formDataWithImage);
     // Add additional logic for form submission, validation, etc.
   };
 
@@ -159,6 +171,13 @@ const Form = (props) => {
         ...newPlayerDetails,
       }));
     }
+  };
+
+  const [image, setImage] = useState(null);
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
   };
 
   return (
@@ -316,6 +335,26 @@ const Form = (props) => {
             </label>
           </>
         )} */}
+
+        <button
+          className="form-button"
+          type="button"
+          onClick={() => {
+            window.location.href = "https://paytm.me/s3EQ-xk";
+          }}
+        >
+          Pay Now
+        </button>
+
+        <label className="form-label">
+          Upload Image:
+          <input
+            className="form-input"
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+          />
+        </label>
 
         <button className="form-button" type="submit">
           Submit
