@@ -1,10 +1,9 @@
 import React from "react";
-import CountUp from "react-countup";
 import Footer from "../Components/Footer/Footer.jsx";
-import post from "../assets/images/postt.jpg";
-import about from "../assets/images/ABOUT.png";
-import found from "../assets/images/FOUNDER.png";
-import pri from "../assets/images/EXE.png";
+import post from "./POST.jpg";
+import ABOUTImage from "./ABOUT.png";
+import found from "./FOUNDER.png";
+import pri from "./EXE.png";
 import Navbar from "../Components/Navbar/Navbar.jsx";
 import "./Home.css";
 
@@ -17,7 +16,7 @@ function Home() {
           <img src={post} alt="Landscape" />
         </section>
         <section className="about-section">
-          <img src={about} alt="Landscape" />
+          <img src={ABOUTImage} alt="Landscape" />
         </section>
         <section className="found-section">
           <img src={found} alt="Landscape" />
