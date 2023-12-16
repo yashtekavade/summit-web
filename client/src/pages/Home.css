@@ -6,6 +6,21 @@
 }
 
 .about-section img {
+  margin-top: -36px;
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+}
+
+.found-section img {
+  margin-top: -5px;
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+}
+
+.pri-section img {
+  margin-top: -5px;
   width: 100%; /* Make the image fill its container */
   height: auto; /* Maintain the aspect ratio */
   object-fit: cover; /* Cover the entire container while maintaining aspect ratio */

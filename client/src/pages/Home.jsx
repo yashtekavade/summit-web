@@ -2,7 +2,9 @@ import React from "react";
 import CountUp from "react-countup";
 import Footer from "../Components/Footer/Footer.jsx";
 import post from "../assets/images/postt.jpg";
-import about from "../assets/images/aboutt.png";
+import about from "../assets/images/ABOUT.png";
+import found from "../assets/images/FOUNDER.png";
+import pri from "../assets/images/EXE.png";
 import Navbar from "../Components/Navbar/Navbar.jsx";
 import "./Home.css";
 
@@ -16,6 +18,12 @@ function Home() {
         </section>
         <section className="about-section">
           <img src={about} alt="Landscape" />
+        </section>
+        <section className="found-section">
+          <img src={found} alt="Landscape" />
+        </section>
+        <section className="pri-section">
+          <img src={pri} alt="Landscape" />
         </section>
         {/*<div className="statistics-container">
           <div className="statistics-box">
