@@ -1,8 +1,11 @@
-.landscape-section img {
-  margin-top: 130px;
-  width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain the aspect ratio */
-  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+.landscape-section img,
+.about-section img,
+.found-section img,
+.pri-section img {
+  margin-top: 110px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .about-section img {

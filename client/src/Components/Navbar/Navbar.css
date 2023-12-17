@@ -103,3 +103,17 @@
 .navbar a:hover {
   color: #ffd700; /* Adjust the hover color as needed */
 }
+
+@media (max-width: 768px) {
+  .navbar-img {
+    height: 30px; /* Adjust the height of the logo for mobile view */
+    transform: scale(2rem); /* Adjust the logo scale for mobile view */
+    margin-left: 10px; /* Adjust margin for mobile view */
+  }
+
+  .nav-link.register-button {
+    font-size: 12px; /* Adjust the font size for mobile view */
+    padding: 10px 15px;
+    margin-right: 10px; /* Adjust padding for mobile view */
+  }
+}
