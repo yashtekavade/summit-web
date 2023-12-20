@@ -165,14 +165,14 @@ const Form = (props) => {
   return (
     <div className="form-container">
       <h2 className="form-title">Registration Form</h2>
-      <h4 className="form-subtitle">
+      <h6 className="form-subtitle">
         <ul>
           <li>
             Maximum 2 players are allowed for each category from each college.
           </li>
           <li>One player can participate in any three individual events.</li>
         </ul>
-      </h4>
+      </h6>
       <form onSubmit={handleSubmit}>
         <label className="form-label">
           College Name: <span className="required-field">*</span>
