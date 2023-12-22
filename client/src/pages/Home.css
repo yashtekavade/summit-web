@@ -41,3 +41,15 @@
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+.brochure-button{
+position: absolute;
+margin-top:25rem;
+margin-left: 9.5rem;
+border-radius: 20px;
+width: 100px;
+height: 40px;
+cursor: pointer;
+}
+.brochure-button:hover {
+  transform:  translate(5px,-5px);
+}

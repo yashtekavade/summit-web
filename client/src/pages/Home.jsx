@@ -6,8 +6,13 @@ import found from "./FOUNDER.png";
 import pri from "./EXE.png";
 import Navbar from "../Components/Navbar/Navbar.jsx";
 import "./Home.css";
+import { saveAs } from "file-saver";
 
-function Home() {
+const Home = () => {
+  const handleDownload = () => {
+    const filePath = "./summit-brochure.pdf";
+    saveAs(filePath, "brochure.pdf");
+  };
   return (
     <div>
       <Navbar />
@@ -16,6 +21,9 @@ function Home() {
           <img src={post} alt="Landscape" />
         </section>
         <section className="about-section">
+          <button className="brochure-button" onClick={handleDownload}>
+            Brochure{" "}
+          </button>
           <img src={ABOUTImage} alt="Landscape" />
         </section>
         <section className="found-section">
@@ -80,6 +88,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;
