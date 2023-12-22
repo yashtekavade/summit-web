@@ -134,7 +134,7 @@ const App = () => {
             path="register/Esports_Valorant"
             element={<EsportsValorantRegistration sport="Esports_Valorant" />}
           />
-          <Route path="admin/result/:title" element={<Result />} />{" "}
+          <Route path="/admin/result" element={<Result />} />{" "}
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>

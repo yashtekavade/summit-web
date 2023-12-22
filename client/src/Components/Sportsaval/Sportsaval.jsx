@@ -1,18 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import Navbar from "../Navbar/Navbar.jsx";
 
 import "./Sportsaval.css";
 
-const SportsCard = ({ title, subtitle, link }) => {
+const SportsCard = ({ title }) => {
+  const navigate = useNavigate(); 
+
+  const handleClick = () => {
+    navigate("/admin/result", { state: { title } });
+  };
+
   return (
-    <div className="sports-card">
+    <div className="sports-card" onClick={handleClick}>
       <h3>{title}</h3>
-      <p className="subtle-subtitle">{subtitle}</p>
-      <Link to={`/admin/result/${encodeURIComponent(title)}`}>Register</Link>
+      <div>Register</div>
     </div>
   );
 };
+
 const Sportsaval = () => {
   return (
     <div>
@@ -20,26 +26,26 @@ const Sportsaval = () => {
       <div className="sports-landing-container">
         <h2>Select a Sport</h2>
         <div className="sports-list">
-          <SportsCard title="Cricket (M)" link="/admin/result/:title" />
-          <SportsCard title="Football Men" link="/admin/result/:title" />
-          <SportsCard title="Football Women" link="/admin/result/:title" />
-          <SportsCard title="Basketball Men" link="/admin/result/:title" />
-          <SportsCard title="Basketball Women" link="/admin/result/:title" />
-          <SportsCard title="Volleyball Men" link="/admin/result/:title" />
-          <SportsCard title="Volleyball Women" link="/admin/result/:title" />
-          <SportsCard title="Kabaddi" link="/admin/result/:title" />
-          <SportsCard title="Badminton Men" link="/admin/result/:title" />
-          <SportsCard title="Badminton Women" link="/admin/result/:title" />
-          <SportsCard title="Table Tennis Men" link="/admin/result/:title" />
-          <SportsCard title="Table Tennis Women" link="/admin/result/:title" />
-          <SportsCard title="Lawn Tennis Men" link="/admin/result/:title" />
-          <SportsCard title="Lawn Tennis Women" link="/admin/result/:title" />
-          <SportsCard title="Chess Men" link="/admin/result/:title" />
-          <SportsCard title="Chess Women" link="/admin/result/:title" />
-          <SportsCard title="Swimming Men" link="/admin/result/:title" />
-          <SportsCard title="Swimming Women" link="/admin/result/:title" />
-          <SportsCard title="Esports BGMI" link="/admin/result/:title" />
-          <SportsCard title="Esports Valorant" link="/admin/result/:title" />
+          <SportsCard title="Cricket (M)" />
+          <SportsCard title="Football Men" />
+          <SportsCard title="Football Women" />
+          <SportsCard title="Basketball Men" />
+          <SportsCard title="Basketball Women" />
+          <SportsCard title="Volleyball Men" />
+          <SportsCard title="Volleyball Women" />
+          <SportsCard title="Kabaddi" />
+          <SportsCard title="Badminton Men" />
+          <SportsCard title="Badminton Women" />
+          <SportsCard title="Table Tennis Men" />
+          <SportsCard title="Table Tennis Women" />
+          <SportsCard title="Lawn Tennis Men" />
+          <SportsCard title="Lawn Tennis Women" />
+          <SportsCard title="Chess Men" />
+          <SportsCard title="Chess Women" />
+          <SportsCard title="Swimming Men" />
+          <SportsCard title="Swimming Women" />
+          <SportsCard title="Esports BGMI" />
+          <SportsCard title="Esports Valorant" />
         </div>
       </div>
     </div>

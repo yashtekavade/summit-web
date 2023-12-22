@@ -1,12 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import "./Result.css";
 
 const Result = () => {
-  const { title } = useParams();
+  const { state } = useLocation();
+  const title = state ? state.title : "Unknown";
+  console.log(title);
+
   return (
-    <div>
-      {" "}
-      <h2>Results for {title}</h2>
+    <div className="Result-body">
+      <h1 className="result-heading">Results for {title}</h1>
+      
     </div>
   );
 };
