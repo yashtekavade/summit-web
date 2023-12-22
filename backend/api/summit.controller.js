@@ -8,17 +8,19 @@ export default class summitController {
 
   static async apiRegister(req, res) {
     try{
-      const collegeType = req.body.collegeType;
-      const collegeName = req.body.collegeName;
-      const collegeCity = req.body.collegeCity;
-      const collegeState = req.body.collegeState;
-      const Accomodation = req.body.Accomodation;
-      const sportsHead = req.body.sportsHead;
-      const sportsSelection = req.body.sportsSelection;
-      const captainName = req.body.captainName;
-      const players = req.body.players;
+      const result = await summitDAO.register(
+        collegeType,
+        collegeName,
+        collegeCity,
+        collegeState,
+        Accomodation,
+        sportsHead,
+        sportsSelection,
+        captainName,
+        JSON.parse(players)
+      );
 
-      const register = await dao.register(collegeType,collegeName,collegeCity,collegeState,Accomodation,sportsHead,sportsSelection,captainName,players);
+      const register = await dao.register(result);
       if (register.status == "success"){
         res.json({message: "success"});
       }else{
