@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Form.css";
+import axios from "axios";
 
 const sportsPlayerCount = {
   "Swimming(M)": 1,
@@ -8,7 +9,6 @@ const sportsPlayerCount = {
 
 const Form = (props) => {
   const initialFormData = {
-    sports: "",
     collegeName: "",
     collegeType: "",
     collegeCity: "",
@@ -16,6 +16,7 @@ const Form = (props) => {
     accommodation: "",
     inchargeDetails: "",
     captainDetails: "",
+    captainMail: "",
     playerName1: "",
     playerEmail1: "",
     playerPhone1: "",
@@ -53,24 +54,35 @@ const Form = (props) => {
       });
     }
   };
+	const handleSubmit = async (e) => {
+		e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+		// Create a FormData object to handle both text and image data
+		const formDataWithImage = new FormData();
 
-    // Create a FormData object to handle both text and image data
-    const formDataWithImage = new FormData();
+		// Append text data
+		Object.entries(formData).forEach(([key, value]) => {
+			formDataWithImage.append(key, value);
+		});
 
-    // Append text data
-    Object.entries(formData).forEach(([key, value]) => {
-      formDataWithImage.append(key, value);
-    });
+		// Append image data
+		formDataWithImage.append("image", image);
 
-    // Append image data
-    formDataWithImage.append("image", image);
+		try {
+			// Make the POST request to the server URL
+			const response = await axios.post(
+				"https://kvdwjdqr-3000.inc1.devtunnels.ms/summit/register",
+				formDataWithImage
+			);
 
-    console.log("Form submitted:", formDataWithImage);
-    // Add additional logic for form submission, validation, etc.
-  };
+			console.log("Form submitted:", response.data);
+			// Add additional logic for handling the response, displaying success message, etc.
+		} catch (error) {
+			console.error("Error submitting form:", error);
+			// Add additional logic for handling the error, displaying error message, etc.
+		}
+		console.log(formData);
+	};
 
   const renderPlayerInputs = () => {
     const sport = props.sport; // Use props.sport instead of formData.sports
@@ -93,7 +105,7 @@ const Form = (props) => {
               name={`playerName${i}`}
               value={formData[`playerName${i}`]}
               onChange={handleInputChange}
-              required
+              
             />
           </label>
 
@@ -105,7 +117,7 @@ const Form = (props) => {
               name={`playerEmail${i}`}
               value={formData[`playerEmail${i}`]}
               onChange={handleInputChange}
-              required
+              
             />
           </label>
 
@@ -117,7 +129,7 @@ const Form = (props) => {
               name={`playerPhone${i}`}
               value={formData[`playerPhone${i}`]}
               onChange={handleInputChange}
-              required
+              
             />
           </label>
         </div>
@@ -175,25 +187,40 @@ const Form = (props) => {
       </h6>
       <form onSubmit={handleSubmit}>
         <label className="form-label">
-          College Name: <span className="required-field">*</span>
+          College Name: <span className="-field">*</span>
           <input
             className="form-input"
             type="text"
             name="collegeName"
             value={formData.collegeName}
             onChange={handleInputChange}
-            required
+            
           />
         </label>
 
         <label className="form-label">
-          College Type: <span className="required-field">*</span>
+					Confirm Sport: <span className="-field">*</span>
+					<select
+						className="form-select"
+						name="sportsConfirm"
+						value={formData.sports}
+						onChange={handleInputChange}
+						
+					>
+						<option value="">Select Sport</option>
+						<option value="Swimming(M)">Swimming (M)</option>
+						<option value="Swimming(W)">Swimming (W)</option>			
+					</select>
+				</label>
+
+        <label className="form-label">
+          College Type: <span className="-field">*</span>
           <select
             className="form-select"
             name="collegeType"
             value={formData.collegeType}
             onChange={handleInputChange}
-            required
+            
           >
             <option value="">Select College Type</option>
             <option value="Private University">Private University</option>
@@ -203,37 +230,37 @@ const Form = (props) => {
         </label>
 
         <label className="form-label">
-          College City: <span className="required-field">*</span>
+          College City: <span className="-field">*</span>
           <input
             className="form-input"
             type="text"
             name="collegeCity"
             value={formData.collegeCity}
             onChange={handleInputChange}
-            required
+            
           />
         </label>
 
         <label className="form-label">
-          College State: <span className="required-field">*</span>
+          College State: <span className="-field">*</span>
           <input
             className="form-input"
             type="text"
             name="collegeState"
             value={formData.collegeState}
             onChange={handleInputChange}
-            required
+            
           />
         </label>
 
         <label className="form-label">
-          Accommodation Required: <span className="required-field">*</span>
+          Accommodation : <span className="-field">*</span>
           <select
             className="form-select"
             name="accommodation"
             value={formData.accommodation}
             onChange={handleInputChange}
-            required
+            
           >
             <option value="">Select Option</option>
             <option value="Yes">Yes</option>
@@ -249,16 +276,28 @@ const Form = (props) => {
         )}
 
         <label className="form-label">
-          Sports Head: <span className="required-field">*</span>
+          Sports Head: <span className="-field">*</span>
           <input
             className="form-input"
             type="text"
             name="inchargeDetails"
             value={formData.inchargeDetails}
             onChange={handleInputChange}
-            required
+            
           />
         </label>
+
+        <label className="form-label">
+					Captain Mail: <span className="-field">*</span>
+					<input
+						className="form-input"
+						type="email"
+						name="captainMail"
+						value={formData.captainMail}
+						onChange={handleInputChange}
+						
+					/>
+				</label>
 
         <label className="form-label">
           Select Sports
@@ -270,14 +309,15 @@ const Form = (props) => {
             required
           >
             <option value="">Select Sports</option>
-            <option value="Freestyle">Freestyle</option>
-            <option value="Backstroke">Backstroke</option>
-            <option value="Breaststroke">Breaststroke</option>
-            <option value="Butterfly">Butterfly</option>
-            <option value="Freestyle Relay">Freestyle Relay</option>
-            <option value="Medley Relay">Medley Relay</option>
+            <option value="Freestyle ">Freestyle 50/100m</option>
+            <option value="Backstroke">Backstroke 50/100m</option>
+            <option value="Breaststroke">Breaststroke 50/100m</option>
+            <option value="Butterfly">Butterfly 50/100m</option>
+            <option value="Freestyle Relay">Freestyle Relay 4/50m</option>
+            <option value="Medley Relay">Medley Relay 4/50m</option>
           </select>
-        </label>
+        </label>
+
 
         {renderPlayerInputs()}
 
@@ -296,13 +336,13 @@ const Form = (props) => {
         </button>
 
         <label className="form-label">
-          Upload Image: <span className="required-field">*</span>
+          Upload Image: <span className="-field">*</span>
           <input
             className="form-input"
             type="file"
             accept="image/*"
             onChange={handleImageUpload}
-            required
+            
           />
         </label>
 
