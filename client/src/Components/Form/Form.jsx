@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Form.css";
 
 const sportsPlayerCount = {
@@ -76,33 +78,42 @@ const Form = (props) => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-
+	  
 		// Create a FormData object to handle both text and image data
 		const formDataWithImage = new FormData();
-
+	  
 		// Append text data
 		Object.entries(formData).forEach(([key, value]) => {
-			formDataWithImage.append(key, value);
+		  formDataWithImage.append(key, value);
 		});
-
+	  
 		// Append image data
 		formDataWithImage.append("image", image);
-
+	  
 		try {
-			// Make the POST request to the server URL
-			const response = await axios.post(
-				"https://kvdwjdqr-3000.inc1.devtunnels.ms/summit/register",
-				formDataWithImage
-			);
-
-			console.log("Form submitted:", response.data);
-			// Add additional logic for handling the response, displaying success message, etc.
+		  // Make the POST request to the server URL
+		  const response = await axios.post(
+			"https://kvdwjdqr-3000.inc1.devtunnels.ms/summit/register",
+			formDataWithImage
+		  );
+	  
+		  console.log("Form submitted:", response.data);
+	  
+		  // Display success toast
+		  toast.success("Form submitted successfully!");
+	  
+		  // Add additional logic for handling the response, displaying success message, etc.
 		} catch (error) {
-			console.error("Error submitting form:", error);
-			// Add additional logic for handling the error, displaying error message, etc.
+		  console.error("Error submitting form:", error);
+	  
+		  // Display error toast
+		  toast.error("Error submitting form. Please try again.");
+	  
+		  // Add additional logic for handling the error, displaying error message, etc.
 		}
+	  
 		console.log(formData);
-	};
+	  };
 
 	const renderPlayerInputs = () => {
 		const sport = props.sport; // Use props.sport instead of formData.sports
@@ -137,7 +148,6 @@ const Form = (props) => {
 							name={`playerEmail${i}`}
 							value={formData[`playerEmail${i}`]}
 							onChange={handleInputChange}
-							
 						/>
 					</label>
 
@@ -196,6 +206,7 @@ const Form = (props) => {
 
 	return (
 		<div className="form-container">
+			<ToastContainer />
 			<h2 className="form-title">Registration Form</h2>
 			<form onSubmit={handleSubmit}>
 				<label className="form-label">
