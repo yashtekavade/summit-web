@@ -16,7 +16,7 @@ MongoClient.connect(uri).catch(err=>{
     process.exit(1)
 }).then(async client =>{
     await summitDAO.InjectDB(client)
-    app.listen(process.env.PORT || 3000, ()=>{
-        console.log('Server is listening on port 3000')
+    app.listen(process.env.PORT || 8000, ()=>{
+        console.log('Server is listening on port 8000')
     })
 })

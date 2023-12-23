@@ -22,36 +22,12 @@ export default class summitDAO {
     }
   }
 
-  async register(
-    collegeType,
-    collegeName,
-    collegeCity,
-    collegeState,
-    Accomodation,
-    sportsHead,
-    sportsSelection,
-    captainName,
-    players
-  ) {
+  async register(result) {
     try {
       // Create an object to hold the order details
-      const register ={
-        collegeType,
-        collegeName,
-        collegeCity,
-        collegeState,
-        Accomodation,
-        sportsHead,
-        sportsSelection,
-        captainName,
-        Tplayers: players.map((player) => ({
-          name: player.name,
-          email: player.email,
-          phone: player.phone 
-        })) 
-      }
+      let sportsSelection = result.sportsConfirm
 
-      const status = await cluster0.collection(`register_${sportsSelection}`).insertOne(register);
+      const status = await cluster0.collection(`register_${sportsSelection}`).insertOne(result);
       if (status.insertedCount === 0) {
         throw new Error("Unable to register");
       }else{
