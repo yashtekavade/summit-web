@@ -27,7 +27,6 @@ const sportsPlayerCount = {
 
 const Form = (props) => {
 	const initialFormData = {
-		sports: "",
 		collegeName: "",
 		collegeType: "",
 		collegeCity: "",
@@ -35,12 +34,14 @@ const Form = (props) => {
 		accommodation: "",
 		inchargeDetails: "",
 		captainDetails: "",
+		captainMail: "",
 		playerName1: "",
 		playerEmail1: "",
 		playerPhone1: "",
 	};
 
 	const [formData, setFormData] = useState({ ...initialFormData });
+
 
 	const handleInputChange = (e) => {
 		const { name, value } = e.target;
@@ -100,6 +101,7 @@ const Form = (props) => {
 			console.error("Error submitting form:", error);
 			// Add additional logic for handling the error, displaying error message, etc.
 		}
+		console.log(formData);
 	};
 
 	const renderPlayerInputs = () => {
@@ -123,7 +125,7 @@ const Form = (props) => {
 							name={`playerName${i}`}
 							value={formData[`playerName${i}`]}
 							onChange={handleInputChange}
-							required
+							
 						/>
 					</label>
 
@@ -135,7 +137,7 @@ const Form = (props) => {
 							name={`playerEmail${i}`}
 							value={formData[`playerEmail${i}`]}
 							onChange={handleInputChange}
-							required
+							
 						/>
 					</label>
 
@@ -147,7 +149,7 @@ const Form = (props) => {
 							name={`playerPhone${i}`}
 							value={formData[`playerPhone${i}`]}
 							onChange={handleInputChange}
-							required
+							
 						/>
 					</label>
 				</div>
@@ -197,25 +199,61 @@ const Form = (props) => {
 			<h2 className="form-title">Registration Form</h2>
 			<form onSubmit={handleSubmit}>
 				<label className="form-label">
-					College Name: <span className="required-field">*</span>
+					College Name: <span className="-field">*</span>
 					<input
 						className="form-input"
 						type="text"
 						name="collegeName"
 						value={formData.collegeName}
 						onChange={handleInputChange}
-						required
+						
 					/>
 				</label>
 
+
 				<label className="form-label">
-					College Type: <span className="required-field">*</span>
+					Confirm Sport: <span className="-field">*</span>
+					<select
+						className="form-select"
+						name="sportsConfirm"
+						value={formData.sports}
+						onChange={handleInputChange}
+						
+					>
+						<option value="">Select Sport</option>
+						<option value="Football(M)">Football (M)</option>
+						<option value="Football(W)">Football (W)</option>
+						<option value="Cricket(M)">Cricket (M)</option>
+						<option value="Basketball(M)">Basketball (M)</option>
+						<option value="Basketball(W)">Basketball (W)</option>
+						<option value="Volleyball(M)">Volleyball (M)</option>
+						<option value="Volleyball(W)">Volleyball (W)</option>
+						<option value="Kabaddi">Kabaddi (M)</option>
+						<option value="Badminton(M)">Badminton (M)</option>
+						<option value="Badminton(W)">Badminton (W)</option>
+						<option value="Table Tennis(M)">Table Tennis (M)</option>
+						<option value="Table Tennis(W)">Table Tennis (W)</option>
+						<option value="Lawn Tennis(M)">Lawn Tennis (M)</option>
+						<option value="Lawn Tennis(W)">Lawn Tennis (W)</option>
+						<option value="Chess(M)">Chess (M)</option>
+						<option value="Chess(W)">Chess (W)</option>
+						<option value="Swimming(M)">Swimming (M)</option>
+						<option value="Swimming(W)">Swimming (W)</option>
+						<option value="Esports_Valorant">Esports-Valorant</option>
+						<option value="Esports_BGMI">Esports-BGMI</option>
+						
+					</select>
+				</label>
+				
+
+				<label className="form-label">
+					College Type: <span className="-field">*</span>
 					<select
 						className="form-select"
 						name="collegeType"
 						value={formData.collegeType}
 						onChange={handleInputChange}
-						required
+						
 					>
 						<option value="">Select College Type</option>
 						<option value="Private University">
@@ -231,38 +269,38 @@ const Form = (props) => {
 				</label>
 
 				<label className="form-label">
-					College City: <span className="required-field">*</span>
+					College City: <span className="-field">*</span>
 					<input
 						className="form-input"
 						type="text"
 						name="collegeCity"
 						value={formData.collegeCity}
 						onChange={handleInputChange}
-						required
+						
 					/>
 				</label>
 
 				<label className="form-label">
-					College State: <span className="required-field">*</span>
+					College State: <span className="-field">*</span>
 					<input
 						className="form-input"
 						type="text"
 						name="collegeState"
 						value={formData.collegeState}
 						onChange={handleInputChange}
-						required
+						
 					/>
 				</label>
 
 				<label className="form-label">
-					Accommodation Required:{" "}
-					<span className="required-field">*</span>
+					Accommodation :{" "}
+					<span className="-field">*</span>
 					<select
 						className="form-select"
 						name="accommodation"
 						value={formData.accommodation}
 						onChange={handleInputChange}
-						required
+						
 					>
 						<option value="">Select Option</option>
 						<option value="Yes">Yes</option>
@@ -278,26 +316,38 @@ const Form = (props) => {
 				)}
 
 				<label className="form-label">
-					Sports Head: <span className="required-field">*</span>
+					Sports Head: <span className="-field">*</span>
 					<input
 						className="form-input"
 						type="text"
 						name="inchargeDetails"
 						value={formData.inchargeDetails}
 						onChange={handleInputChange}
-						required
+						
 					/>
 				</label>
 
 				<label className="form-label">
-					Captain Name: <span className="required-field">*</span>
+					Captain Name: <span className="-field">*</span>
 					<input
 						className="form-input"
 						type="text"
 						name="captainDetails"
 						value={formData.captainDetails}
 						onChange={handleInputChange}
-						required
+						
+					/>
+				</label>
+
+				<label className="form-label">
+					Captain Mail: <span className="-field">*</span>
+					<input
+						className="form-input"
+						type="email"
+						name="captainMail"
+						value={formData.captainMail}
+						onChange={handleInputChange}
+						
 					/>
 				</label>
 
@@ -308,7 +358,7 @@ const Form = (props) => {
             name="sports"
             value={formData.sports}
             onChange={handleSportsChange}
-            required
+            
           >
             <option value="">Select Sports</option>
             <option value="Football(M)">Football (M)</option>
@@ -345,7 +395,7 @@ const Form = (props) => {
                 name="esportsType"
                 value={formData.esportsType}
                 onChange={handleInputChange}
-                required
+                
               >
                 <option value="">Select Esports Type</option>
                 <option value="Esports_Valorant">Valorant</option>
@@ -370,13 +420,13 @@ const Form = (props) => {
 				</button>
 
 				<label className="form-label">
-					Upload Image: <span className="required-field">*</span>
+					Upload Image: <span className="-field">*</span>
 					<input
 						className="form-input"
 						type="file"
 						accept="image/*"
 						onChange={handleImageUpload}
-						required
+						
 					/>
 				</label>
 

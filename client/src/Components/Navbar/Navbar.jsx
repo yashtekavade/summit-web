@@ -13,7 +13,6 @@ const Navbar = () => {
         </Link>
 
         <div className="navbar-contents">
-          {/*
           <div>
             <Link to="/" className="nav-link">
               Home
@@ -53,16 +52,13 @@ const Navbar = () => {
               <Link to="/accommodation" className="dropdown-link">
                 Accommodation
               </Link>
-              <Link to="/covid-guidelines" className="dropdown-link">
-                COVID-19 Guidelines
-              </Link>
             </div>
           </div>
           <div>
             <Link to="/sports" className="nav-link">
               Sports
             </Link>
-  </div>*/}
+          </div>
           <div>
             <Link to="/register" className="nav-link register-button">
               Register Now
