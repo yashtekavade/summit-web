@@ -221,9 +221,27 @@ const Form = (props) => {
 						
 					>
 						<option value="">Select Sport</option>
-						<option value="Cricket(M)">
-						Cricket (M)
-						</option>
+						<option value="Football(M)">Football (M)</option>
+						<option value="Football(W)">Football (W)</option>
+						<option value="Cricket(M)">Cricket (M)</option>
+						<option value="Basketball(M)">Basketball (M)</option>
+						<option value="Basketball(W)">Basketball (W)</option>
+						<option value="Volleyball(M)">Volleyball (M)</option>
+						<option value="Volleyball(W)">Volleyball (W)</option>
+						<option value="Kabaddi">Kabaddi (M)</option>
+						<option value="Badminton(M)">Badminton (M)</option>
+						<option value="Badminton(W)">Badminton (W)</option>
+						<option value="Table Tennis(M)">Table Tennis (M)</option>
+						<option value="Table Tennis(W)">Table Tennis (W)</option>
+						<option value="Lawn Tennis(M)">Lawn Tennis (M)</option>
+						<option value="Lawn Tennis(W)">Lawn Tennis (W)</option>
+						<option value="Chess(M)">Chess (M)</option>
+						<option value="Chess(W)">Chess (W)</option>
+						<option value="Swimming(M)">Swimming (M)</option>
+						<option value="Swimming(W)">Swimming (W)</option>
+						<option value="Esports_Valorant">Esports-Valorant</option>
+						<option value="Esports_BGMI">Esports-BGMI</option>
+						
 					</select>
 				</label>
 				
