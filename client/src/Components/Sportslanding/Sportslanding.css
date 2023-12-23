@@ -1,0 +1,83 @@
+/* SportsCard.css */
+
+.sports-landing-container {
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px; /* Adjust the margin-top value to leave space for the fixed navbar */
+}
+
+.sports-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(5, auto); /* 5 rows */
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.sports-card {
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 200px;
+  margin: 1rem;
+  background: linear-gradient(45deg, #3498db, #654797);
+  padding: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.sports-card:hover {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.sports-card h3 {
+  font-family: "Poppins";
+  font-size: 0.94rem;
+  color: white; /* Updated text color */
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.sports-card a {
+  font: inherit;
+  line-height: 1;
+  color: white; /* Updated text color */
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-weight: bold; /* Updated font weight */
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.subtle-subtitle {
+  font-size: 0.9rem;
+  color: #eee; /* Adjusted color to match the styling */
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+/* Add a media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .sports-list {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-card {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sports-list {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-card {
+    max-width: none;
+  }
+}
