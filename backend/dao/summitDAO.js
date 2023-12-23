@@ -24,7 +24,7 @@ export default class summitDAO {
 
   async register(result) {
     try {
-      // Create an object to hold the order details
+      // Insert the registration details into the database
       let sportsSelection = result.sportsConfirm
 
       const status = await cluster0.collection(`register_${sportsSelection}`).insertOne(result);
