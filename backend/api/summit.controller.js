@@ -1,7 +1,7 @@
 // Import necessary modules and initialize DAO
 import summitDAO from "../dao/summitDAO.js";
 import sendEmail from "../sendmail.js";
-const dao = new summitDAO(); // Create a new instance of the LuxuriantDAO class
+const dao = new summitDAO();
 
 
 
@@ -18,7 +18,7 @@ export default class summitController {
         if (sendMail){
           res.json({message: "success", mail: "success"});
         }else{
-          res.json({mail:"failure"});
+          res.json({message: "success",mail:"failure"});
         }
         // res.json({message: "success"});
       }else{
