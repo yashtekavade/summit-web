@@ -30,7 +30,7 @@ const Registrationfees = () => {
               in).
             </li>
           </ul>
-          <h1>
+          <h1 className="heading-top">
             The following documents must be submitted during on ground
             verification-
           </h1>
@@ -56,11 +56,16 @@ const Registrationfees = () => {
 
           <span>Registration In-charge: Dhruv Chaudhary +91 720301362</span>
           <br></br>
+          <br></br>
         </div>
         <span>
           Note: Entries will be restricted to the first 40 teams only, per
           event, so please send your entries as soon as possible.
         </span>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <br></br>
       </div>
       <div className="rf-info">
