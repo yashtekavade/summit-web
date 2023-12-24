@@ -13,7 +13,7 @@ import Result from "./pages/Result";
 //import Message from "./Components/about/Message.jsx";
 //import Org from "./Components/about/org-team.jsx";
 //import Head from "./Components/about/EventHead.jsx";
-
+import Login from "./pages/Login.js";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
 import Accommodation from "./pages/Accommodation";
@@ -55,6 +55,7 @@ const App = () => {
 
           
           <Route path="/sports" element={<Sports />} />*/}
+          <Route path="/Login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/accommodation" element={<Accommodation />} />
           <Route path="/instructions" element={<Instructions />} />
@@ -141,7 +142,7 @@ const App = () => {
             element={<EsportsValorantRegistration sport="Esports_Valorant" />}
           />
           <Route path="/admin/result" element={<Result />} />{" "}
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/890123fasgbavblaadmin" element={<Admin />} />
         </Routes>
       </div>
     </Router>
