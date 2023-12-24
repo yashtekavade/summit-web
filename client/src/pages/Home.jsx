@@ -8,9 +8,11 @@ import Navbar from "../Components/Navbar/Navbar.jsx";
 import "./Home.css";
 import { saveAs } from "file-saver";
 
+
+
 const Home = () => {
   const handleDownload = () => {
-    const filePath = "./summit-brochure.pdf";
+    const filePath = "./summit24-brochure.pdf";
     saveAs(filePath, "brochure.pdf");
   };
   return (
