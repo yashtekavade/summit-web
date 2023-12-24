@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import Instructions from "./pages/Instructions";
 import Guests from "./pages/Guests.jsx";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
@@ -15,6 +16,7 @@ import Result from "./pages/Result";
 
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
+import Accommodation from "./pages/Accommodation";
 
 import CricketMRegistration from "./pages/Registrationpages/CricketMRegistration";
 import FootballMRegistration from "./pages/Registrationpages/FootballMRegistration";
@@ -54,6 +56,8 @@ const App = () => {
           
           <Route path="/sports" element={<Sports />} />*/}
           <Route path="/register" element={<Register />} />
+          <Route path="/accommodation" element={<Accommodation />} />
+          <Route path="/instructions" element={<Instructions />} />
           <Route path="/guest" element={<Guests />} />
           <Route path="/registration-fees" element={<Registrationfees />} />
           <Route

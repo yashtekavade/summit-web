@@ -1,5 +1,7 @@
 import React from "react";
 import feeimg from "../assets/images/fees.png";
+import feeqr from "../assets/images/feeqr.png";
+import Footer from "../Components/Footer/Footer";
 import "./Registrationfees.css";
 const Registrationfees = () => {
   return (
@@ -70,8 +72,13 @@ const Registrationfees = () => {
       </div>
       <div className="rf-info">
         <h2 className="rfimg-title">Fees Format</h2>
-        <img className="rf-img" src={feeimg} alt="Esteemed Guests" />
+        <div className="rf-img-holder">
+          <img className="rf-img" src={feeimg} alt="Esteemed Guests" />
+          <img className="rf-img2" src={feeqr} alt="feeqr" />
+        </div>
+        <hr></hr>
       </div>
+      <Footer />
     </div>
   );
 };

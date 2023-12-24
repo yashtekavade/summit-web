@@ -7,10 +7,16 @@
 
 .rf-img {
   padding-top: 5rem;
-  width: 75%;
+  width: 90%;
 }
-
+.rf-img2 {
+    margin-top: 12rem;
+    height:20rem;
+    margin-left: 8rem;
+    width: 20rem;
+  }
 .rfimg-title {
+    padding-top: 4rem;
   font-size: 4rem;
   color: white !important;
 }
@@ -29,7 +35,6 @@
 }
 .rf-info {
   color: white !important;
-
   background-color: #2e7ec0;
   display: flex;
   flex-direction: column;
@@ -37,7 +42,7 @@
   align-items: center;
   justify-items: center;
   justify-content: center;
-  padding-bottom: 1rem;
+  padding-bottom: 6rem;
 }
 #regpol {
   padding-top: 5rem;
@@ -75,4 +80,8 @@
 .heading-top {
   margin-bottom: 4rem;
   margin-left: 0;
+}
+.rf-img-holder{
+    display:flex;
+    flex-direction:row;
 }
