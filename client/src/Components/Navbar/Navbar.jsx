@@ -3,8 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/LOGO/mixedd.png";
+import brochurePath from "./summit24-brochure.pdf";
 
 const Navbar = () => {
+  const handleDownload = () => {
+    window.open(brochurePath, "_blank");
+  };
   return (
     <div>
       <div className="navbar-body">
@@ -16,6 +20,11 @@ const Navbar = () => {
           <div>
             <Link to="/" className="nav-link">
               Home
+            </Link>
+          </div>
+          <div>
+            <Link to="/" className="nav-link" onClick={handleDownload}>
+              Brochure
             </Link>
           </div>
           {/*<div className="dropdown">

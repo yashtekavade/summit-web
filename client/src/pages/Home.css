@@ -41,15 +41,32 @@
   border: 1px solid #ccc;
   border-radius: 8px;
 }
-.brochure-button{
-position: absolute;
-margin-top:25rem;
-margin-left: 9.5rem;
-border-radius: 20px;
-width: 6rem;
-height: 2.5rem;
-cursor: pointer;
+
+.brochure-button {
+  position: absolute;
+  margin-top: 22rem;
+  margin-left: 9.5rem;
+  border-radius: 20px;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background-color: #3498db; /* Change to your preferred background color */
+  color: #fff; /* Change to your preferred text color */
+  border: 1px solid #3498db; /* Matching border color */
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
 }
+
 .brochure-button:hover {
-  transform:  translate(5px,-5px);
+  transform: translate(5px, -5px);
+  background-color: #2980b9; /* Change to a darker shade on hover */
+  border-color: #2980b9; /* Matching border color on hover */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Enhance box shadow on hover */
+}
+
+@media only screen and (max-width: 400px) {
+  body .brochure-button {
+    margin-top: 0.1rem !important; /* Adjust the top margin for smaller screens */
+    margin-left: auto !important; /* Center the button horizontally */
+  }
 }
