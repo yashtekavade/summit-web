@@ -203,6 +203,7 @@ const Form = (props) => {
             name="collegeName"
             value={formData.collegeName}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -213,6 +214,7 @@ const Form = (props) => {
             name="sportsConfirm"
             value={formData.sports}
             onChange={handleInputChange}
+            required
           >
             <option value="">Select Sport</option>
             <option value="Swimming(M)">Swimming (M)</option>
@@ -227,6 +229,7 @@ const Form = (props) => {
             name="collegeType"
             value={formData.collegeType}
             onChange={handleInputChange}
+            required
           >
             <option value="">Select College Type</option>
             <option value="Private University">Private University</option>
@@ -243,6 +246,7 @@ const Form = (props) => {
             name="collegeCity"
             value={formData.collegeCity}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -254,6 +258,7 @@ const Form = (props) => {
             name="collegeState"
             value={formData.collegeState}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -264,6 +269,7 @@ const Form = (props) => {
             name="accommodation"
             value={formData.accommodation}
             onChange={handleInputChange}
+            required
           >
             <option value="">Select Option</option>
             <option value="Yes">Yes</option>
@@ -286,6 +292,7 @@ const Form = (props) => {
             name="inchargeDetails"
             value={formData.inchargeDetails}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -297,6 +304,7 @@ const Form = (props) => {
             name="captainMail"
             value={formData.captainMail}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -336,15 +344,18 @@ const Form = (props) => {
           Pay Now
         </button>
 
-        <label className="form-label">
-          Upload Image: <span className="-field">*</span>
-          <input
-            className="form-input"
-            type="file"
-            accept="image/*"
-            onChange={handleImageUpload}
-          />
-        </label>
+        <button
+          className="form-button"
+          type="button"
+          onClick={() => {
+            const paymentUrl = "https://forms.gle/XkjHLXptYd4o1zxk8";
+
+            // Open the payment URL in a new window
+            window.open(paymentUrl, "_blank");
+          }}
+        >
+          Upload ScreenShot (Required)
+        </button>
 
         <button className="form-button" type="submit">
           Submit
