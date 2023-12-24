@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const sportsPlayerCount = {
   "Swimming(M)": 1,
@@ -56,45 +56,44 @@ const Form = (props) => {
       });
     }
   };
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-	  
-		// Create a FormData object to handle both text and image data
-		const formDataWithImage = new FormData();
-	  
-		// Append text data
-		Object.entries(formData).forEach(([key, value]) => {
-		  formDataWithImage.append(key, value);
-		});
-	  
-		// Append image data
-		formDataWithImage.append("image", image);
-	  
-		try {
-		  // Make the POST request to the server URL
-		  const response = await axios.post(
-			"https://kvdwjdqr-3000.inc1.devtunnels.ms/summit/register",
-			formDataWithImage
-		  );
-	  
-		  console.log("Form submitted:", response.data);
-	  
-		  // Display success toast
-		  toast.success("Form submitted successfully!");
-	  
-		  // Add additional logic for handling the response, displaying success message, etc.
-		} catch (error) {
-		  console.error("Error submitting form:", error);
-	  
-		  // Display error toast
-		  toast.error("Error submitting form. Please try again.");
-	  
-		  // Add additional logic for handling the error, displaying error message, etc.
-		}
-	  
-		console.log(formData);
-	  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    // Create a FormData object to handle both text and image data
+    const formDataWithImage = new FormData();
+
+    // Append text data
+    Object.entries(formData).forEach(([key, value]) => {
+      formDataWithImage.append(key, value);
+    });
+
+    // Append image data
+    formDataWithImage.append("image", image);
+
+    try {
+      // Make the POST request to the server URL
+      const response = await axios.post(
+        "https://pink-chicken-wig.cyclic.app/summit/register",
+        formDataWithImage
+      );
+
+      console.log("Form submitted:", response.data);
+
+      // Display success toast
+      toast.success("Form submitted successfully!");
+
+      // Add additional logic for handling the response, displaying success message, etc.
+    } catch (error) {
+      console.error("Error submitting form:", error);
+
+      // Display error toast
+      toast.error("Error submitting form. Please try again.");
+
+      // Add additional logic for handling the error, displaying error message, etc.
+    }
+
+    console.log(formData);
+  };
 
   const renderPlayerInputs = () => {
     const sport = props.sport; // Use props.sport instead of formData.sports
@@ -117,7 +116,6 @@ const Form = (props) => {
               name={`playerName${i}`}
               value={formData[`playerName${i}`]}
               onChange={handleInputChange}
-              
             />
           </label>
 
@@ -129,7 +127,6 @@ const Form = (props) => {
               name={`playerEmail${i}`}
               value={formData[`playerEmail${i}`]}
               onChange={handleInputChange}
-              
             />
           </label>
 
@@ -141,7 +138,6 @@ const Form = (props) => {
               name={`playerPhone${i}`}
               value={formData[`playerPhone${i}`]}
               onChange={handleInputChange}
-              
             />
           </label>
         </div>
@@ -207,24 +203,22 @@ const Form = (props) => {
             name="collegeName"
             value={formData.collegeName}
             onChange={handleInputChange}
-            
           />
         </label>
 
         <label className="form-label">
-					Confirm Sport: <span className="-field">*</span>
-					<select
-						className="form-select"
-						name="sportsConfirm"
-						value={formData.sports}
-						onChange={handleInputChange}
-						
-					>
-						<option value="">Select Sport</option>
-						<option value="Swimming(M)">Swimming (M)</option>
-						<option value="Swimming(W)">Swimming (W)</option>			
-					</select>
-				</label>
+          Confirm Sport: <span className="-field">*</span>
+          <select
+            className="form-select"
+            name="sportsConfirm"
+            value={formData.sports}
+            onChange={handleInputChange}
+          >
+            <option value="">Select Sport</option>
+            <option value="Swimming(M)">Swimming (M)</option>
+            <option value="Swimming(W)">Swimming (W)</option>
+          </select>
+        </label>
 
         <label className="form-label">
           College Type: <span className="-field">*</span>
@@ -233,7 +227,6 @@ const Form = (props) => {
             name="collegeType"
             value={formData.collegeType}
             onChange={handleInputChange}
-            
           >
             <option value="">Select College Type</option>
             <option value="Private University">Private University</option>
@@ -250,7 +243,6 @@ const Form = (props) => {
             name="collegeCity"
             value={formData.collegeCity}
             onChange={handleInputChange}
-            
           />
         </label>
 
@@ -262,7 +254,6 @@ const Form = (props) => {
             name="collegeState"
             value={formData.collegeState}
             onChange={handleInputChange}
-            
           />
         </label>
 
@@ -273,7 +264,6 @@ const Form = (props) => {
             name="accommodation"
             value={formData.accommodation}
             onChange={handleInputChange}
-            
           >
             <option value="">Select Option</option>
             <option value="Yes">Yes</option>
@@ -296,21 +286,19 @@ const Form = (props) => {
             name="inchargeDetails"
             value={formData.inchargeDetails}
             onChange={handleInputChange}
-            
           />
         </label>
 
         <label className="form-label">
-					Captain Mail: <span className="-field">*</span>
-					<input
-						className="form-input"
-						type="email"
-						name="captainMail"
-						value={formData.captainMail}
-						onChange={handleInputChange}
-						
-					/>
-				</label>
+          Captain Mail: <span className="-field">*</span>
+          <input
+            className="form-input"
+            type="email"
+            name="captainMail"
+            value={formData.captainMail}
+            onChange={handleInputChange}
+          />
+        </label>
 
         <label className="form-label">
           Select Sports
@@ -329,8 +317,8 @@ const Form = (props) => {
             <option value="Freestyle Relay">Freestyle Relay 4/50m</option>
             <option value="Medley Relay">Medley Relay 4/50m</option>
           </select>
-        </label>
-
+             
+        </label>
 
         {renderPlayerInputs()}
 
@@ -355,7 +343,6 @@ const Form = (props) => {
             type="file"
             accept="image/*"
             onChange={handleImageUpload}
-            
           />
         </label>
 
