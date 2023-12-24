@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-//import Guests from "./pages/Guests.jsx";
+import Guests from "./pages/Guests.jsx";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
 //import Sports from "./pages/Sports";
@@ -36,6 +36,7 @@ import ChessMRegistration from "./pages/Registrationpages/ChessMRegistration";
 import ChessWRegistration from "./pages/Registrationpages/ChessWRegistration";
 import EsportsBGMIRegistration from "./pages/Registrationpages/EsportsBGMIRegistration";
 import EsportsValorantRegistration from "./pages/Registrationpages/EsportsValorantRegistration";
+import Registrationfees from "./pages/Registrationfees";
 
 const App = () => {
   return (
@@ -49,11 +50,12 @@ const App = () => {
           <Route path="/organising-team" element={<Org />} />
           <Route path="/event-head" element={<Head />} />
 
-          <Route path="/guest" element={<Guests />} />
 
           
           <Route path="/sports" element={<Sports />} />*/}
           <Route path="/register" element={<Register />} />
+          <Route path="/guest" element={<Guests />} />
+          <Route path="/registration-fees" element={<Registrationfees />} />
           <Route
             path="register/Cricket(M)"
             element={<CricketMRegistration sport="Cricket(M)" />}
