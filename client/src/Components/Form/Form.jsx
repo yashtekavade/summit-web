@@ -135,6 +135,7 @@ const Form = (props) => {
               name={`playerName${i}`}
               value={formData[`playerName${i}`]}
               onChange={handleInputChange}
+              required
             />
           </label>
 
@@ -214,6 +215,7 @@ const Form = (props) => {
             name="collegeName"
             value={formData.collegeName}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -224,6 +226,7 @@ const Form = (props) => {
             name="sportsConfirm"
             value={formData.sports}
             onChange={handleInputChange}
+            required
           >
             <option value="">Select Sport</option>
             <option value="Football(M)">Football (M)</option>
@@ -256,6 +259,7 @@ const Form = (props) => {
             name="collegeType"
             value={formData.collegeType}
             onChange={handleInputChange}
+            required
           >
             <option value="">Select College Type</option>
             <option value="Private University">Private University</option>
@@ -272,6 +276,7 @@ const Form = (props) => {
             name="collegeCity"
             value={formData.collegeCity}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -283,6 +288,7 @@ const Form = (props) => {
             name="collegeState"
             value={formData.collegeState}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -293,6 +299,7 @@ const Form = (props) => {
             name="accommodation"
             value={formData.accommodation}
             onChange={handleInputChange}
+            required
           >
             <option value="">Select Option</option>
             <option value="Yes">Yes</option>
@@ -315,6 +322,7 @@ const Form = (props) => {
             name="inchargeDetails"
             value={formData.inchargeDetails}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -326,6 +334,7 @@ const Form = (props) => {
             name="captainDetails"
             value={formData.captainDetails}
             onChange={handleInputChange}
+            required
           />
         </label>
 
@@ -337,68 +346,16 @@ const Form = (props) => {
             name="captainMail"
             value={formData.captainMail}
             onChange={handleInputChange}
+            required
           />
         </label>
 
-        {/* <label className="form-label">
-          Select Sports
-          <select
-            className="form-select"
-            name="sports"
-            value={formData.sports}
-            onChange={handleSportsChange}
-            
-          >
-            <option value="">Select Sports</option>
-            <option value="Football(M)">Football (M)</option>
-            <option value="Football(W)">Football (W)</option>
-            <option value="Cricket(M)">Cricket (M)</option>
-            <option value="Basketball(M)">Basketball (M)</option>
-            <option value="Basketball(W)">Basketball (W)</option>
-            <option value="Volleyball(M)">Volleyball (M)</option>
-            <option value="Volleyball(W)">Volleyball (W)</option>
-            <option value="Kabaddi">Kabaddi (M)</option>
-            <option value="Badminton(M)">Badminton (M)</option>
-            <option value="Badminton(W)">Badminton (W)</option>
-            <option value="Table Tennis(M)">Table Tennis (M)</option>
-            <option value="Table Tennis(W)">Table Tennis (W)</option>
-            <option value="Lawn Tennis(M)">Lawn Tennis (M)</option>
-            <option value="Lawn Tennis(W)">Lawn Tennis (W)</option>
-            <option value="Chess(M)">Chess (M)</option>
-            <option value="Chess(W)">Chess (W)</option>
-            <option value="Swimming(M)">Swimming (M)</option>
-            <option value="Swimming(W)">Swimming (W)</option>
-            <option value="Esports_Valorant">Esports-Valorant</option>
-            <option value="Esports_BGMI">Esports-BGMI</option>
-          </select>
-        </label> */}
-
         {renderPlayerInputs()}
-
-        {/* {formData.sports === "Esports" && (
-          <>
-            <label className="form-label">
-              Esports Type:
-              <select
-                className="form-select"
-                name="esportsType"
-                value={formData.esportsType}
-                onChange={handleInputChange}
-                
-              >
-                <option value="">Select Esports Type</option>
-                <option value="Esports_Valorant">Valorant</option>
-                <option value="Esports_BGMI">BGMI</option>
-              </select>
-            </label>
-          </>
-        )} */}
 
         <button
           className="form-button"
           type="button"
           onClick={() => {
-            // Replace 'https://paytm.me/s3EQ-xk' with your actual payment URL
             const paymentUrl = "https://paytm.me/s3EQ-xk";
 
             // Open the payment URL in a new window
@@ -408,15 +365,18 @@ const Form = (props) => {
           Pay Now
         </button>
 
-        <label className="form-label">
-          Upload Image: <span className="-field">*</span>
-          <input
-            className="form-input"
-            type="file"
-            accept="image/*"
-            onChange={handleImageUpload}
-          />
-        </label>
+        <button
+          className="form-button"
+          type="button"
+          onClick={() => {
+            const paymentUrl = "https://forms.gle/XkjHLXptYd4o1zxk8";
+
+            // Open the payment URL in a new window
+            window.open(paymentUrl, "_blank");
+          }}
+        >
+          Upload ScreenShot (Required)
+        </button>
 
         <button className="form-button" type="submit">
           Submit
