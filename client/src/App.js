@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 //import Guests from "./pages/Guests.jsx";
 import Home from "./pages/Home";
-
+import Result from "./pages/Result";
 //import Sports from "./pages/Sports";
 
 //import About from "./Components/about/About.jsx";
@@ -14,6 +14,8 @@ import Home from "./pages/Home";
 //import Head from "./Components/about/EventHead.jsx";
 
 import Register from "./pages/Register";
+import Admin from "./pages/Admin";
+
 import CricketMRegistration from "./pages/Registrationpages/CricketMRegistration";
 import FootballMRegistration from "./pages/Registrationpages/FootballMRegistration";
 import FootballWRegistration from "./pages/Registrationpages/FootballWRegistration";
@@ -42,7 +44,6 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-
           {/*<Route path="/about" element={<About />} />
           <Route path="/executive-message" element={<Message />} />
           <Route path="/organising-team" element={<Org />} />
@@ -133,6 +134,8 @@ const App = () => {
             path="register/Esports_Valorant"
             element={<EsportsValorantRegistration sport="Esports_Valorant" />}
           />
+          <Route path="/admin/result" element={<Result />} />{" "}
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>
     </Router>
