@@ -7,8 +7,7 @@ import pri from "./EXE.png";
 import Navbar from "../Components/Navbar/Navbar.jsx";
 import "./Home.css";
 import { saveAs } from "file-saver";
-
-
+import videoPath from "../assets/images/mitwpusummit.mp4";
 
 const Home = () => {
   const handleDownload = () => {
@@ -19,9 +18,12 @@ const Home = () => {
     <div>
       <Navbar />
       <div>
-        <section className="landscape-section">
+        {/*<section className="landscape-section">
           <img src={post} alt="Landscape" />
-        </section>
+  </section>*/}
+        <div className="teaser">
+          <video src={videoPath} autoPlay loop muted />
+        </div>
         <section className="about-section">
           <button className="brochure-button" onClick={handleDownload}>
             Brochure{" "}

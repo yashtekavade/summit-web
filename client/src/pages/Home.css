@@ -29,6 +29,16 @@
   object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
 }
 
+.teaser {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
 .statistics-container {
   display: flex;
   justify-content: space-around;
