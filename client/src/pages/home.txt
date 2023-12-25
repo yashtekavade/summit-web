@@ -1,0 +1,105 @@
+import React from "react";
+import Navbar from "../Components/Navbar/Navbar.jsx";
+import "./Home.css";
+import { saveAs } from "file-saver";
+import AboutImg from "../assets/images/me.jpg";
+
+const Home = () => {
+  const handleDownload = () => {
+    const filePath = "./summit24-brochure.pdf";
+    saveAs(filePath, "brochure.pdf");
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <div className="about-content">
+        <div className="left-content">
+          <p className="sub">About the</p>
+          <p className="title">MIT WPU SUMMIT</p>
+          <p>
+            India’s biggest Annual Inter-Engineering Sports event hosted by
+            MIT-World Peace University committed towards the goal of ‘Nation
+            Building through Sports’. MIT World Peace University (MIT-WPU) has
+            been organizing the National Level Inter-Engineering Sports “SUMMIT”
+            since 2004. Every year Summit attracts over 5,000 students with
+            participation of more than 150 Engineering and Technological
+            Institutions across the country.
+          </p>
+          <button className="brochure-button" onClick={handleDownload}>
+            Brochure
+          </button>
+        </div>
+        <div className="img-container">
+          <img className="img" src={AboutImg} alt="about" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+.about-content {
+  background: #ededed;
+  margin-top: 10rem;
+  display: flex;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.img-container {
+  flex: 1;
+}
+
+.img {
+  width: 20rem;
+  height: auto;
+  margin-right: 40rem;
+  display: flex;
+}
+
+.left-content {
+  flex: 2;
+  margin-left: 5rem;
+  margin-right: 1rem;
+  margin-top: 20rem;
+}
+
+.brochure-button {
+  position: absolute;
+  margin-top: 22rem;
+  margin-left: 9.5rem;
+  border-radius: 20px;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: 1px solid #3498db;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.brochure-button:hover {
+  transform: translate(5px, -5px);
+  background-color: #2980b9;
+  border-color: #2980b9;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 400px) {
+  .brochure-button {
+    margin-top: 0.1rem !important;
+    margin-left: auto !important;
+  }
+
+  .img {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
