@@ -7,12 +7,13 @@ import Instructions from "./pages/Instructions";
 import Guests from "./pages/Guests.jsx";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
-//import Sports from "./pages/Sports";
+import Sports from "./pages/Sports";
 
-//import About from "./Components/about/About.jsx";
-//import Message from "./Components/about/Message.jsx";
-//import Org from "./Components/about/org-team.jsx";
-//import Head from "./Components/about/EventHead.jsx";
+import About from "./pages/About.js";
+import Message from "./pages/Message.js";
+import Minister from "./pages/minister.js";
+import Org from "./pages/org-team.js";
+import Head from "./pages/EventHead.js";
 import Login from "./pages/Login.js";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
@@ -47,14 +48,12 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/*<Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/executive-message" element={<Message />} />
+          <Route path="/minister-message" element={<Minister />} />
           <Route path="/organising-team" element={<Org />} />
           <Route path="/event-head" element={<Head />} />
-
-
-          
-          <Route path="/sports" element={<Sports />} />*/}
+          <Route path="/sports" element={<Sports />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/accommodation" element={<Accommodation />} />

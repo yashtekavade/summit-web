@@ -1,16 +1,19 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+import Footer from "../Components/Footer/Footer";
+import "./About.css";
 
 const About = () => {
   return (
     <div>
-      <div>
-        <h2>About MIT-WPU Summit 2021</h2>
-        <p>
+      <div className="about-div">
+        <h2 className="about-title">About MIT-WPU Summit 2021.</h2>
+        <p className="about-subtitle">
           India’s biggest Annual Inter-Engineering Sports event hosted by
           MIT-World Peace University committed towards the goal of ‘Nation
           Building through Sports’.
         </p>
+      </div>
+      <div>
         <p>
           Reading books might help you gain knowledge and succeed in life, but
           sports make us understand the importance of principles to be followed

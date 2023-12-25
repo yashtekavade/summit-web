@@ -1,24 +1,25 @@
 // OrgTeam.jsx
 import React from "react";
-import orgTeamPhoto1 from "../../assets/org-team/1.png";
-import orgTeamPhoto2 from "../../assets/org-team/2.png";
-import orgTeamPhoto3 from "../../assets/org-team/3.png";
-import orgTeamPhoto4 from "../../assets/org-team/4.png";
-import orgTeamPhoto5 from "../../assets/org-team/5.png";
-import orgTeamPhoto6 from "../../assets/org-team/6.png";
-import orgTeamPhoto7 from "../../assets/org-team/7.png";
-import orgTeamPhoto8 from "../../assets/org-team/8.png";
-import orgTeamPhoto9 from "../../assets/org-team/9.png";
-import orgTeamPhoto10 from "../../assets/org-team/10.png";
-import orgTeamPhoto11 from "../../assets/org-team/11.png";
-import orgTeamPhoto12 from "../../assets/org-team/12.png";
+import orgTeamPhoto1 from "../assets/org-team/1.png";
+import orgTeamPhoto2 from "../assets/org-team/2.png";
+import orgTeamPhoto3 from "../assets/org-team/3.png";
+import orgTeamPhoto4 from "../assets/org-team/4.png";
+import orgTeamPhoto5 from "../assets/org-team/5.png";
+import orgTeamPhoto6 from "../assets/org-team/6.png";
+import orgTeamPhoto7 from "../assets/org-team/7.png";
+import orgTeamPhoto8 from "../assets/org-team/8.png";
+import orgTeamPhoto9 from "../assets/org-team/9.png";
+import orgTeamPhoto10 from "../assets/org-team/10.png";
+import orgTeamPhoto11 from "../assets/org-team/11.png";
+import orgTeamPhoto12 from "../assets/org-team/12.png";
+import "./org.css";
 
 const OrgTeam = () => {
   return (
     <div>
-      <h2>The Organising Team</h2>
-
-      {/* Two photos of head */}
+      <div className="org-div">
+        <h2 className="org-title">The Organising Team.</h2>
+      </div>
       <div
         style={{
           display: "flex",

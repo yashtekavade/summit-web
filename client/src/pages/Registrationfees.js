@@ -7,7 +7,10 @@ const Registrationfees = () => {
   return (
     <div>
       <div className="rf-div">
-        <h2 className="rf-title">Registration</h2>
+        <h2 className="rf-title">
+          MIT-WPU Summit 2021 <br />
+          Registration Fees.
+        </h2>
       </div>
 
       <div className="rf-rules">

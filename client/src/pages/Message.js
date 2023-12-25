@@ -1,10 +1,14 @@
 // Message.jsx
 import React from "react";
-import Footer from "../Footer/Footer";
+import "./message.css";
+import Footer from "../Components/Footer/Footer";
 
 const Message = () => {
   return (
     <div>
+      <div className="msg-div">
+        <h2 className="msg-title">Executive President's Message.</h2>
+      </div>
       <div>
         <h2>Executive President's Message</h2>
         <p>Dear Students,</p>

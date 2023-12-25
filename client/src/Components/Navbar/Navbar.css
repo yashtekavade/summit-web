@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem; /* Reduce the gap between navbar items */
+  gap: 1.2rem; /* Reduce the gap between navbar items */
   font-size: 16px; /* Reduce font size */
 }
 
@@ -31,7 +31,7 @@
   margin-bottom: 1rem;
   margin-right: 2rem; /* Adjust margin for logo */
   margin-left: 2rem;
-  height: 50px; /* Increase logo height */
+  height: 40px; /* Increase logo height */
   transform: scale(2.5); /* Adjust logo scale */
 }
 

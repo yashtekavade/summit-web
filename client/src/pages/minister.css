@@ -1,0 +1,40 @@
+.min-title {
+  font-family: "Poppins", sans-serif;
+  margin-top: 8rem;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  color: white !important;
+}
+
+.min-div {
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: #cd2f72;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ededed;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.imgg {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 100px;
+}
+
+.text-container {
+  flex: 2;
+}

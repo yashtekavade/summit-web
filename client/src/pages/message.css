@@ -1,19 +1,13 @@
-.guest-title {
+.msg-title {
   font-family: "Poppins", sans-serif;
-  margin-top: 10rem;
+  margin-top: 8rem;
   font-size: 4rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
   color: white !important;
 }
 
-.guest-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.guest-div {
+.msg-div {
   height: 30rem;
   width: 100%;
   display: flex;
@@ -22,13 +16,4 @@
   justify-content: center;
   margin-bottom: 2rem;
   background-color: #cd2f72;
-}
-.guest-div2 {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
 }
