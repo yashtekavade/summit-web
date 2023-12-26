@@ -7,6 +7,7 @@ import Founder from "../assets/images/karad.png";
 import Exe from "../assets/images/exe.png";
 import videoPath from "../assets/images/mitwpusummit.mp4";
 import Footer from "../Components/Footer/Footer.jsx";
+import Foot from "../assets/brand/fp2.png";
 
 const Home = () => {
   const handleDownload = () => {
@@ -95,6 +96,39 @@ const Home = () => {
           <img className="img_c" src={Exe} alt="about" />
         </div>
       </div>
+
+      {/*<div className="footer">
+        <div className="footer-content">
+          <p className="footer-title">MIT-WPU Summit 2024</p>
+          <p className="foot-pg">
+            India’s biggest Annual Inter-Engineering Sports event hosted by
+            MIT-World Peace University committed towards the goal of ‘Nation
+            Building through Sports’. MIT World Peace University (MIT-WPU) has
+            been organizing the National Level Inter-Engineering Sports “SUMMIT”
+            since 2004.
+          </p>
+        </div>
+        <div className="contact-content">
+          <p className="contact-title">Contact</p>
+          <p className="contact-pg">
+            Dhruv Chaudhary +91 7203013642 <br />
+            Aarya Pansare +91 9421211487 <br />
+            Arpita Deep +91 7665588706 <br />
+            Parth Sathe +91 983307807
+          </p>
+        </div>
+        <div className="details-content">
+          <p className="details-pg">
+            summit@mitwpu.edu.in
+            <br />
+            S.No. 124 Paul Road,
+            <br /> Kothrud, Pune-411038 <br />
+          </p>
+        </div>
+        <div className="img-contain">
+          <img className="img" src={Foot} alt="about" />
+        </div>
+  </div>*/}
       <Footer />
     </div>
   );

@@ -82,7 +82,42 @@ video {
 .founder-content {
   background: #ededed;
   display: flex;
+  justify-content: space-between;
 }
+
+.footer {
+  background: #ededed;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem; /* Add padding for better spacing */
+}
+
+.footer-content,
+.contact-content,
+.details-content {
+  flex: 1;
+  margin-right: 0px; /* Add spacing between columns if desired */
+  padding: 5rem; /* Add padding for better spacing */
+  margin-left: 50px;
+}
+
+.details-content {
+  margin-top: 50px;
+}
+.footer-title,
+.contact-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.foot-pg,
+.contact-pg,
+.details-pg {
+  font-size: 14px;
+  margin-right: 0px; /* Reset margin-right for the last column */
+}
+
 @media only screen and (max-width: 400px) {
   .brochure-button {
     margin-top: 0.1rem !important;
