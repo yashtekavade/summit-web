@@ -62,11 +62,11 @@ const Home = () => {
             Elevated" The organization of 'Summit each year is our effort
             towards this end. hope & feel confident that the contestants will
             give off their best to excel in every sport that they have
-            participated in. Wish you all the best! Thank You
+            participated in. Wish you all the best! Thank You!
           </p>
         </div>
         <div className="img-container">
-          <img className="img" src={Founder} alt="about" />
+          <img className="img_b" src={Founder} alt="about" />
         </div>
       </div>
 
@@ -92,7 +92,7 @@ const Home = () => {
           </p>
         </div>
         <div className="img-container">
-          <img className="img" src={Exe} alt="about" />
+          <img className="img_c" src={Exe} alt="about" />
         </div>
       </div>
       <Footer />

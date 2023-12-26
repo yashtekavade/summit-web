@@ -21,15 +21,33 @@ video {
 }
 
 .img {
-  margin-right: 40rem;
+  margin-right: 34rem;
+  margin-left: 10rem;
+  margin-top: 8rem;
+  display: flex;
+}
+
+.img_b {
+  margin-right: 30rem;
   margin-left: 10rem;
   margin-top: 10rem;
   display: flex;
+  width: 50%;
+  height: auto;
+}
+
+.img_c {
+  margin-right: 30rem;
+  margin-left: 10rem;
+  margin-top: 10rem;
+  display: flex;
+  width: 50%;
+  height: auto;
 }
 
 .left-content {
   margin-left: 10rem;
-  margin-right: 0.2rem;
+  margin-right: 0rem;
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
