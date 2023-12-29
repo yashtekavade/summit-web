@@ -34,61 +34,73 @@ const Guests = () => {
       </div>
       <div className="guest-div2">
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto1}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto2}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto3}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto4}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto5}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto6}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto7}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto8}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto9}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto10}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto11}
           alt="Esteemed Guests"
         />
         <img
+          loading="lazy"
           className="guest-img-head"
           src={esteemedGuestsPhoto12}
           alt="Esteemed Guests"
@@ -98,13 +110,48 @@ const Guests = () => {
         <h1>The Power of Togetherness: MIT-WPU Summit Group Captures</h1>
       </div>
       <div className="guest-div2">
-        <img className="grpimg" src={grp1} alt="Esteemed Guests" />
-        <img className="grpimg" src={grp2} alt="Esteemed Guests" />
-        <img className="grpimg" src={grp3} alt="Esteemed Guests" />
-        <img className="grpimg" src={grp4} alt="Esteemed Guests" />
-        <img className="grpimg" src={grp5} alt="Esteemed Guests" />
-        <img className="grpimg" src={grp6} alt="Esteemed Guests" />
-        <img className="grpimg" src={grp7} alt="Esteemed Guests" />
+        <img
+          loading="lazy"
+          className="grpimg"
+          src={grp1}
+          alt="Esteemed Guests"
+        />
+        <img
+          loading="lazy"
+          className="grpimg"
+          src={grp2}
+          alt="Esteemed Guests"
+        />
+        <img
+          loading="lazy"
+          className="grpimg"
+          src={grp3}
+          alt="Esteemed Guests"
+        />
+        <img
+          loading="lazy"
+          className="grpimg"
+          src={grp4}
+          alt="Esteemed Guests"
+        />
+        <img
+          loading="lazy"
+          className="grpimg"
+          src={grp5}
+          alt="Esteemed Guests"
+        />
+        <img
+          loading="lazy"
+          className="grpimg"
+          src={grp6}
+          alt="Esteemed Guests"
+        />
+        <img
+          loading="lazy"
+          className="grpimg"
+          src={grp7}
+          alt="Esteemed Guests"
+        />
       </div>
       <Footer />
     </div>
