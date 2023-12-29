@@ -7,25 +7,50 @@
   color: white !important;
 }
 
+.guest-heading {
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.guest-img-head{
+  height: 300px;
+  width:520px;
+  border-radius:20px;
+  margin: 20px;
+  border:1px solid black;
+}
+.grpimg{
+  height: 400px;
+  width:660px;
+  border-radius:20px;
+  margin: 20px;
+  border:1px solid black;
+}
 .guest-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+
 }
 
 .guest-div {
-  height: 30rem;
+  height: 40rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-self: center;
   justify-content: center;
-  margin-bottom: 2rem;
-  background-color: #cd2f72;
+  margin-bottom: 4rem;
+  background-color: #edba31;
 }
 .guest-div2 {
+  padding: 10px;
+  margin:10px;
+  flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-self: center;
   align-items: center;
   justify-items: center;

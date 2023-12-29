@@ -27,6 +27,13 @@ const Navbar = () => {
               Brochure
             </Link>
           </div>
+
+          <div>
+            <Link to="/guest" className="nav-link">
+              Guests
+            </Link>
+          </div>
+
           {/* <div className="dropdown">
             <span className="nav-link">About ▼</span>
             <div className="dropdown-content">
@@ -47,11 +54,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div>
-            <Link to="/guest" className="nav-link">
-              Guests
-            </Link>
-          </div>
+         
           <div className="dropdown">
             <span className="nav-link">Participants ▼</span>
             <div className="dropdown-content">
