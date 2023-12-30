@@ -31,7 +31,7 @@ const Sportsaval = () => {
 
       // Send a POST request with the selected sport name using Axios
       const response = await axios.post(
-        "https://kvdwjdqr-4000.inc1.devtunnels.ms/summit/sport-details",
+        "https://pink-chicken-wig.cyclic.app/summit/sport-details",
         { title: sport },
         {
           headers: {
