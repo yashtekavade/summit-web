@@ -1,14 +1,12 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import Navbar from "../Navbar/Navbar.jsx";
-
 import "./Sportsaval.css";
 
-const SportsCard = ({ title }) => {
-  const navigate = useNavigate(); 
-
+const SportsCard = ({ title, onSelectSport }) => {
   const handleClick = () => {
-    navigate("/admin/result", { state: { title } });
+    onSelectSport(title);
   };
 
   return (
@@ -20,32 +18,85 @@ const SportsCard = ({ title }) => {
 };
 
 const Sportsaval = () => {
+  const [selectedSport, setSelectedSport] = useState(null);
+  const [selectedSportDetails, setSelectedSportDetails] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  const handleSelectSport = async (sport) => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      // Send a POST request with the selected sport name using Axios
+      const response = await axios.post(
+        "https://kvdwjdqr-4000.inc1.devtunnels.ms/summit/sport-details",
+        { title: sport },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const data = response.data;
+      console.log("Sport details:", data);
+
+      // Set the selected sport details in the state
+      setSelectedSportDetails(data);
+
+      // Navigate to the result page with the selected sport
+      navigate("/admin/result", { state: { title: sport, data } });
+    } catch (error) {
+      console.error("Axios error:", error);
+      setError("Error fetching sport details");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <Navbar />
       <div className="sports-landing-container">
         <h2>Select a Sport</h2>
         <div className="sports-list">
-          <SportsCard title="Cricket (M)" />
-          <SportsCard title="Football Men" />
-          <SportsCard title="Football Women" />
-          <SportsCard title="Basketball Men" />
-          <SportsCard title="Basketball Women" />
-          <SportsCard title="Volleyball Men" />
-          <SportsCard title="Volleyball Women" />
-          <SportsCard title="Kabaddi" />
-          <SportsCard title="Badminton Men" />
-          <SportsCard title="Badminton Women" />
-          <SportsCard title="Table Tennis Men" />
-          <SportsCard title="Table Tennis Women" />
-          <SportsCard title="Lawn Tennis Men" />
-          <SportsCard title="Lawn Tennis Women" />
-          <SportsCard title="Chess Men" />
-          <SportsCard title="Chess Women" />
-          <SportsCard title="Swimming Men" />
-          <SportsCard title="Swimming Women" />
-          <SportsCard title="Esports BGMI" />
-          <SportsCard title="Esports Valorant" />
+          <SportsCard onSelectSport={handleSelectSport} title="Cricket(M)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Football(M)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Football(W)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Basketball(M)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Basketball(W)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Volleyball(M)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Volleyball(W)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Kabaddi" />
+          <SportsCard onSelectSport={handleSelectSport} title="Badminton(M)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Badminton(W)" />
+          <SportsCard
+            onSelectSport={handleSelectSport}
+            title="Table Tennis(M)"
+          />
+          <SportsCard
+            onSelectSport={handleSelectSport}
+            title="Table Tennis(W)"
+          />
+          <SportsCard
+            onSelectSport={handleSelectSport}
+            title="Lawn Tennis(M)"
+          />
+          <SportsCard
+            onSelectSport={handleSelectSport}
+            title="Lawn Tennis(W)"
+          />
+          <SportsCard onSelectSport={handleSelectSport} title="Chess(M)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Chess(W)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Swimming(M)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Swimming(W)" />
+          <SportsCard onSelectSport={handleSelectSport} title="Esports BGMI" />
+          <SportsCard
+            onSelectSport={handleSelectSport}
+            title="Esports Valorant"
+          />
         </div>
       </div>
     </div>

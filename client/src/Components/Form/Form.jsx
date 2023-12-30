@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Form.css";
+import { useNavigate } from "react-router-dom";
 
 const sportsPlayerCount = {
   "Cricket(M)": 16,
@@ -28,6 +29,7 @@ const sportsPlayerCount = {
 };
 
 const Form = (props) => {
+  const navigate = useNavigate();
   const initialFormData = {
     collegeName: "",
     collegeType: "",
@@ -100,6 +102,8 @@ const Form = (props) => {
 
       // Display success toast
       toast.success("Form submitted successfully!");
+
+      navigate("/");
 
       // Add additional logic for handling the response, displaying success message, etc.
     } catch (error) {
