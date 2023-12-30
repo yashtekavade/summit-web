@@ -1,35 +1,16 @@
 import React, { useState } from "react";
 import Sportsaval from "../Components/Sportsaval/Sportsaval";
+import TeamDetails from "../Components/TeamDetails/TeamDetails"; // Import the TeamDetails component
 import "./Admin.css";
 
 const Admin = () => {
   const [selectedSportDetails, setSelectedSportDetails] = useState(null);
 
-  const handleSportSelection = async (selectedSport) => {
-    try {
-      // Send a POST request with the selected sport name
-      const response = await fetch(
-        "https://kvdwjdqr-4000.inc1.devtunnels.ms/summit/sport-details",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ title: selectedSport }),
-        }
-      );
+  const handleSportSelection = (selectedSportDetails) => {
+    console.log("Sport details:", selectedSportDetails);
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log("Sport details:", data);
-
-      setSelectedSportDetails(data);
-    } catch (error) {
-      console.error("Fetch error:", error);
-    }
+    // Set the selected sport details in the state
+    setSelectedSportDetails(selectedSportDetails);
   };
 
   return (
@@ -39,8 +20,8 @@ const Admin = () => {
       {selectedSportDetails && (
         <div>
           <h2>Selected Sport Details</h2>
-          <p>Title: {selectedSportDetails.title}</p>
-          {/* Display other details based on the server response */}
+          {/* Use the TeamDetails component to display the data */}
+          <TeamDetails teamData={selectedSportDetails} />
         </div>
       )}
     </div>
