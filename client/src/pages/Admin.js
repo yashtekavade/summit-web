@@ -8,7 +8,7 @@ const Admin = () => {
   const handleSportSelection = async (selectedSport) => {
     try {
       // Send a POST request with the selected sport name
-      const response = await fetch("/api/sport-details", {
+      const response = await fetch("https://kvdwjdqr-4000.inc1.devtunnels.ms/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -20,11 +20,9 @@ const Admin = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
-      // Assuming the server responds with JSON data
       const data = await response.json();
       console.log("Sport details:", data);
 
-      // Set the selected sport details in the state
       setSelectedSportDetails(data);
     } catch (error) {
       console.error("Fetch error:", error);
