@@ -1,8 +1,54 @@
-.result-heading{
+
+.Result-body {
+    padding: 20px;
+  }
+  
+  .result-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .college-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .college-tile {
+    background-color: #f0f0f0;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .college-tile h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .expanded {
+    height: auto; /* Set height to auto for expansion */
+  }
+  
+  .expanded-details {
+    margin-top: 10px;
+  }
+  
+  .expanded-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .expanded-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .expanded-details li {
+    margin-bottom: 10px;
+  }
+  
+.result-frame{
     margin-top: 10rem;
-    margin-left: 40rem;
-    color:black;
-}
-.result-body{
-    position: relative;
 }

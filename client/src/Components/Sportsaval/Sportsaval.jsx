@@ -29,7 +29,6 @@ const Sportsaval = () => {
       setLoading(true);
       setError(null);
 
-      // Send a POST request with the selected sport name using Axios
       const response = await axios.post(
         "https://pink-chicken-wig.cyclic.app/summit/sport-details",
         { title: sport },
@@ -43,11 +42,8 @@ const Sportsaval = () => {
       const data = response.data;
       console.log("Sport details:", data);
 
-      // Set the selected sport details in the state
-      setSelectedSportDetails(data);
-
-      // Navigate to the result page with the selected sport
-      navigate("/admin/result", { state: { title: sport, data } });
+      // Navigate to the result page with the selected sport details as state
+      navigate("/admin/result", { state: { selectedSportDetails: data } });
     } catch (error) {
       console.error("Axios error:", error);
       setError("Error fetching sport details");
