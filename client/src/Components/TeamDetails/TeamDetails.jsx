@@ -14,7 +14,7 @@ const TeamDetails = ({ teamData }) => {
         <strong>Captain Email:</strong> {teamData.captainMail}
       </p>
       {/* Add more fields based on your data */}
-      <h3>Players:</h3>
+        <h3>Players:</h3>
       <ul>
         {Array.from({ length: 16 }, (_, index) => index + 1).map((index) => (
           <li key={index}>

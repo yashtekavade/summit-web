@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Sportsaval from "../Components/Sportsaval/Sportsaval";
-import TeamDetails from "../Components/TeamDetails/TeamDetails"; // Import the TeamDetails component
 import "./Admin.css";
 
 const Admin = () => {
@@ -13,6 +12,8 @@ const Admin = () => {
     setSelectedSportDetails(selectedSportDetails);
   };
 
+  console.log("Selected Sport Details in State:", selectedSportDetails);
+
   return (
     <div>
       <Sportsaval onSelectSport={handleSportSelection} />
@@ -20,8 +21,55 @@ const Admin = () => {
       {selectedSportDetails && (
         <div>
           <h2>Selected Sport Details</h2>
-          {/* Use the TeamDetails component to display the data */}
-          <TeamDetails teamData={selectedSportDetails} />
+
+          {/* Display general information */}
+          <div>
+            <strong>College Name:</strong> {selectedSportDetails[0].collegeName}
+          </div>
+          <div>
+            <strong>College City:</strong> {selectedSportDetails[0].collegeCity}
+          </div>
+          <div>
+            <strong>College State:</strong>{" "}
+            {selectedSportDetails[0].collegeState}
+          </div>
+          <div>
+            <strong>College Type:</strong> {selectedSportDetails[0].collegeType}
+          </div>
+
+          {/* Display player details */}
+          <ul>
+            {[...Array(16).keys()].map((playerIndex) => (
+              <li key={playerIndex}>
+                <strong>Player {playerIndex + 1}:</strong>
+                <div>
+                  <span>
+                    Name:{" "}
+                    {selectedSportDetails[0][`playerName${playerIndex + 1}`]}
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    Email:{" "}
+                    {selectedSportDetails[0][`playerEmail${playerIndex + 1}`]}
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    Phone:{" "}
+                    {selectedSportDetails[0][`playerPhone${playerIndex + 1}`]}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {/* Display other details */}
+          <div>
+            <strong>Sports Confirm:</strong>{" "}
+            {selectedSportDetails[0].sportsConfirm}
+          </div>
+          {/* Add other details as needed */}
         </div>
       )}
     </div>
