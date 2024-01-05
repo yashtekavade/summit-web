@@ -70,11 +70,12 @@ const Navbar = () => {
             </div>
           </div>
           <div>
+          
+  </div>*/}
+          <div>
             <Link to="/sports" className="nav-link">
               Sports
             </Link>
-  </div>*/}
-          <div>
             <Link to="/register" className="nav-link register-button">
               Register Now
             </Link>

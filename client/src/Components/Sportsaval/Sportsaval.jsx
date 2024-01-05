@@ -41,6 +41,7 @@ const Sportsaval = () => {
 
       const data = response.data;
       console.log("Sport details:", data);
+      console.log("Sport selected:", sport);
 
       // Navigate to the result page with the selected sport details as state
       navigate("/admin/result", { state: { selectedSportDetails: data } });
