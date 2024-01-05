@@ -101,9 +101,13 @@ const Form = (props) => {
       console.log("Form submitted:", response.data);
 
       // Display success toast
-      toast.success("Form submitted successfully!");
+      if (toast.success) {
+        toast.success("Form submitted successfully!");
 
-      navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      }
 
       // Add additional logic for handling the response, displaying success message, etc.
     } catch (error) {
@@ -139,7 +143,6 @@ const Form = (props) => {
               name={`playerName${i}`}
               value={formData[`playerName${i}`]}
               onChange={handleInputChange}
-              required
             />
           </label>
 

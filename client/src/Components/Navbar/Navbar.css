@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.2rem; /* Reduce the gap between navbar items */
+  gap: 1.3rem; /* Reduce the gap between navbar items */
   font-size: 16px; /* Reduce font size */
 }
 
@@ -70,6 +70,7 @@
 /* Styles for the Register Now button */
 .nav-link.register-button {
   margin-right: 2rem;
+  margin-left: 2rem;
   font-weight: bold;
   padding: 15px 20px;
   background-color: #3498db;
@@ -90,7 +91,7 @@
   width: 100%;
   background-color: #333; /* Adjust the background color as needed */
   padding: 1rem;
-  z-index: 1000; /* Ensure the navbar is above other elements */
+  z-index: 1100; /* Ensure the navbar is above other elements */
 }
 
 .navbar a {

@@ -6,15 +6,12 @@ const Heading = () => {
   return (
     <div className="PageHeading">
       <div className="MainHeading">
-        <h1>
-          How Far Will <br />
-          You Go ?
-        </h1>
+        <h1>How Far Will You Go ?</h1>
       </div>
-      <div className="MainHeading-img">
+      {/* <div className="MainHeading-img">
         {" "}
         <img src={b1} />
-      </div>
+      </div> */}
     </div>
   );
 };

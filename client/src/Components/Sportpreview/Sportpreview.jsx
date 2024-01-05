@@ -8,7 +8,7 @@ const Sportpreview = () => {
         <a id="cricket-heading" className="sportpreview-title">
           Cricket
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -62,7 +62,7 @@ const Sportpreview = () => {
         <a id="football-heading" className="sportpreview-title">
           Football
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -116,7 +116,7 @@ const Sportpreview = () => {
         <a id="tabbletennis-heading" className="sportpreview-title">
           Tabble Tennis
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -170,7 +170,7 @@ const Sportpreview = () => {
         <a id="chess-heading" className="sportpreview-title">
           Chess
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -224,7 +224,7 @@ const Sportpreview = () => {
         <a id="basketball-heading" className="sportpreview-title">
           Basketball
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -278,7 +278,7 @@ const Sportpreview = () => {
         <a id="tennis-heading" className="sportpreview-title">
           Tennis
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -332,7 +332,7 @@ const Sportpreview = () => {
         <a id="volleyball-heading" className="sportpreview-title">
           VolleyBall
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -386,7 +386,7 @@ const Sportpreview = () => {
         <a id="badminton-heading" className="sportpreview-title">
           Badminton
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -440,7 +440,7 @@ const Sportpreview = () => {
         <a id="swimming-heading" className="sportpreview-title">
           Swimming
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -494,7 +494,7 @@ const Sportpreview = () => {
         <a id="esports-heading" className="sportpreview-title">
           Esports
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img
@@ -548,7 +548,7 @@ const Sportpreview = () => {
         <a id="kabaddi-heading" className="sportpreview-title">
           Kabaddi
         </a>
-        <span className="sportpreview-text">Venue:</span>
+        <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
             <img

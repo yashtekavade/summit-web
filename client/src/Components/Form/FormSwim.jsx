@@ -3,6 +3,7 @@ import "./Form.css";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const sportsPlayerCount = {
   "Swimming(M)": 1,
@@ -10,6 +11,8 @@ const sportsPlayerCount = {
 };
 
 const Form = (props) => {
+  const navigate = useNavigate();
+
   const initialFormData = {
     collegeName: "",
     collegeType: "",
@@ -22,16 +25,27 @@ const Form = (props) => {
     playerName1: "",
     playerEmail1: "",
     playerPhone1: "",
+    extra: "",
   };
 
   const [formData, setFormData] = useState({ ...initialFormData });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+
+    // Update state for sports separately
+    if (name === "sports") {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: value,
+      }));
+    } else if (name !== "confirmSport") {
+      // Ignore "confirmSport" changes
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
 
     if (name === "accommodation" && value === "Yes") {
       console.log(
@@ -50,12 +64,13 @@ const Form = (props) => {
         newPlayerDetails[`playerPhone${i}`] = "";
       }
 
-      setFormData({
-        ...formData,
+      setFormData((prevFormData) => ({
+        ...prevFormData,
         ...newPlayerDetails,
-      });
+      }));
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -79,8 +94,14 @@ const Form = (props) => {
 
       console.log("Form submitted:", response.data);
 
-      // Display success toast
-      toast.success("Form submitted successfully!");
+      // Display success toast and navigate after a delay
+      if (toast.success) {
+        toast.success("Form submitted successfully!");
+
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      }
 
       // Add additional logic for handling the response, displaying success message, etc.
     } catch (error) {
@@ -159,19 +180,23 @@ const Form = (props) => {
     // Reset player details when sports selection changes
     if (name === "sports") {
       const playerCount = sportsPlayerCount[value];
-      const newPlayerDetails = {};
+      setFormData((prevFormData) => {
+        const newPlayerDetails = {};
 
-      for (let i = 1; i <= playerCount; i++) {
-        newPlayerDetails[`playerName${i}`] = "";
-        newPlayerDetails[`playerEmail${i}`] = "";
-        newPlayerDetails[`playerPhone${i}`] = "";
-      }
+        for (let i = 1; i <= playerCount; i++) {
+          newPlayerDetails[`playerName${i}`] =
+            prevFormData[`playerName${i}`] || "";
+          newPlayerDetails[`playerEmail${i}`] =
+            prevFormData[`playerEmail${i}`] || "";
+          newPlayerDetails[`playerPhone${i}`] =
+            prevFormData[`playerPhone${i}`] || "";
+        }
 
-      // Update the state with the new player details
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        ...newPlayerDetails,
-      }));
+        return {
+          ...prevFormData,
+          ...newPlayerDetails,
+        };
+      });
     }
   };
 
@@ -206,7 +231,6 @@ const Form = (props) => {
             required
           />
         </label>
-
         <label className="form-label">
           Confirm Sport: <span className="-field">*</span>
           <select
@@ -312,8 +336,8 @@ const Form = (props) => {
           Select Sports
           <select
             className="form-select"
-            name="sports"
-            value={formData.sports}
+            name="extra"
+            value={formData.extra}
             onChange={handleSportsChange}
             required
           >
