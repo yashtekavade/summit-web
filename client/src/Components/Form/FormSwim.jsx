@@ -235,7 +235,7 @@ const Form = (props) => {
           Confirm Sport: <span className="-field">*</span>
           <select
             className="form-select"
-            name="sports"
+            name="sportsConfirm"
             value={formData.sports}
             onChange={handleInputChange}
             required
