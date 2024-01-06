@@ -1,14 +1,15 @@
 .msg-title {
   font-family: "Poppins", sans-serif;
-  margin-top: 8rem;
-  font-size: 4rem;
+  margin-top: 10rem;
+  font-size: 6rem;
+  font-weight: bold;
   margin-bottom: 2rem;
   margin-left: 2rem;
   color: white !important;
 }
 
 .msg-div {
-  height: 30rem;
+  height: 40rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,4 +17,16 @@
   justify-content: center;
   margin-bottom: 2rem;
   background-color: #cd2f72;
+}
+
+.exe-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+  height: 100%;
+  width: 100%;
+  margin-top: -32px;
 }

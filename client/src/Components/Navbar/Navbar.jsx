@@ -34,7 +34,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* <div className="dropdown">
+          <div className="dropdown">
             <span className="nav-link">About ▼</span>
             <div className="dropdown-content">
               <Link to="/about" className="dropdown-link">
@@ -46,16 +46,18 @@ const Navbar = () => {
               <Link to="/minister-message" className="dropdown-link">
                 Sport's Minister Message
               </Link>
+              {/*
               <Link to="/organising-team" className="dropdown-link">
                 Organising Team
               </Link>
               <Link to="/event-head" className="dropdown-link">
                 Event Head
               </Link>
+  */}
             </div>
           </div>
-         
-          <div className="dropdown">
+
+          {/*<div className="dropdown">
             <span className="nav-link">Participants ▼</span>
             <div className="dropdown-content">
               <Link to="/registration-fees" className="dropdown-link">
@@ -73,7 +75,7 @@ const Navbar = () => {
             <Link to="/sports" className="nav-link">
               Sports
             </Link>
-  </div>*/}
+          </div>*/}
           <div>
             <Link to="/register" className="nav-link register-button">
               Register Now
