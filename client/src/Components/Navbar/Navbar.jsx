@@ -22,18 +22,6 @@ const Navbar = () => {
               Home
             </Link>
           </div>
-          <div>
-            <Link to="/" className="nav-link" onClick={handleDownload}>
-              Brochure
-            </Link>
-          </div>
-
-          <div>
-            <Link to="/guest" className="nav-link">
-              Guests
-            </Link>
-          </div>
-
           <div className="dropdown">
             <span className="nav-link">About ▼</span>
             <div className="dropdown-content">
@@ -56,8 +44,18 @@ const Navbar = () => {
   */}
             </div>
           </div>
+          <div>
+            <Link to="/guest" className="nav-link">
+              Guests
+            </Link>
+          </div>
+          <div>
+            <Link to="/" className="nav-link" onClick={handleDownload}>
+              Brochure
+            </Link>
+          </div>
 
-          {/*<div className="dropdown">
+          <div className="dropdown">
             <span className="nav-link">Participants ▼</span>
             <div className="dropdown-content">
               <Link to="/registration-fees" className="dropdown-link">
@@ -71,11 +69,13 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
+          {/*
           <div>
             <Link to="/sports" className="nav-link">
               Sports
             </Link>
-          </div>*/}
+          </div>
+*/}
           <div>
             <Link to="/register" className="nav-link register-button">
               Register Now

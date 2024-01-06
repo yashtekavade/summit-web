@@ -1,43 +1,47 @@
-#inst-intro{
-    height: 42rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    justify-content: center;
-    background-color: #cd2f72;
+.inst-intro {
+  height: 40rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: #cd2f72;
 }
 
-#inst-heading{
-    margin-top: 5rem;
-    font-size: 8rem;
-    padding-bottom: 2rem;
-    color: white !important;
+.inst-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-top: 8rem;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  color: white;
 }
 
-.inst-heading2{
-    margin-left: 4rem;
-    margin-top: 1rem;
-    font-size: 5rem;
-    padding-bottom: 3rem;
-    color: white !important;
+.inst-heading2 {
+  margin-left: 4rem;
+  margin-top: 1rem;
+  font-size: 5rem;
+  padding-bottom: 3rem;
+  color: white;
 }
 
-#inst-headingone{
-    margin-right: 6rem;
+#inst-headingone {
+  margin-right: 6rem;
 }
-.inst-body{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-self: center;
-    justify-content: center;
-    padding-bottom: 4rem;
-    background-color: #4dc8db;
+.inst-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+  background-color: #4dc8db;
 }
-.textbody{
-    line-height: 2rem;
-    font-size:1.5rem;
-    word-wrap: break-word;
-    margin-left: 2rem;
+.textbody {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  margin-left: 2rem;
 }

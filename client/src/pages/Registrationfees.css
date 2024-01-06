@@ -1,14 +1,15 @@
 .rf-title {
   font-family: "Poppins", sans-serif;
+  font-weight: bold;
   margin-top: 8rem;
-  font-size: 4rem;
+  font-size: 6rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
   color: white !important;
 }
 
 .rf-div {
-  height: 30rem;
+  height: 40rem;
   width: 100%;
   display: flex;
   flex-direction: column;

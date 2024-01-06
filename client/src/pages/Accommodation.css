@@ -1,41 +1,46 @@
-#acc-intro{
-    height: 42rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    justify-content: center;
-    background-color: #cd2f72;
+.acc-intro {
+  height: 40rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: #cd2f72;
 }
-#acc-heading{
-    margin-top: 5rem;
-    font-size: 12rem;
-    padding-bottom: 2rem;
+.acc-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-top: 8rem;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  color: white !important;
 }
-.acc-heading2{
-    margin-top: 4rem;
-    font-size: 2rem;
-    padding-bottom: 3rem;
-    color: white !important;
+.acc-heading2 {
+  margin-top: 4rem;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  color: white !important;
 }
-.acc-body{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    justify-content: center;
-    padding-bottom: 4rem;
-    background-color: #4dc8db;
+.acc-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+  background-color: #4dc8db;
 }
-.acc-text{
-    margin-bottom:4rem;
-    margin-top: 4rem;
-    line-height: 2rem;
-    font-size:1.5rem;
-    word-wrap: break-word;
-    margin-left: 2rem;
+.acc-text {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  margin-left: 2rem;
 }
 
-.section-container{
-    display: flex;
+.section-container {
+  display: flex;
 }

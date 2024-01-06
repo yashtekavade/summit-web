@@ -1,16 +1,20 @@
 import React from "react";
 import Footer from "../Components/Footer/Footer";
+import i1 from "../assets/images/ingrp.png";
 import "./Instructions.css";
 
 const Instructions = () => {
   return (
     <div>
-      <div id="inst-intro">
-        <div id="inst-heading">
-          <h1>Instructions</h1>
+      <div className="inst-intro">
+        <div className="inst-heading">
+          <h1>Instructions For MIT- WPU Summit 2021</h1>
         </div>
-        <div id="common-rules"></div>
       </div>
+      <div className="image-container">
+        <img src={i1} alt="about" className="about-image" />
+      </div>
+      {/*
       <div className="inst-body">
         <h2 id="inst-headingone" className="inst-heading2">
           Important Rules
@@ -68,7 +72,7 @@ const Instructions = () => {
           prior to the event.<br></br> ▪ All other MIT-WPU SUMMIT general rules
           are applicable.
         </div>
-      </div>
+      </div>*/}
 
       <Footer />
     </div>

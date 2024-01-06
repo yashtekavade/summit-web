@@ -2,7 +2,9 @@ import React from "react";
 import feeimg from "../assets/images/fees.png";
 import feeqr from "../assets/images/feeqr.png";
 import Footer from "../Components/Footer/Footer";
+import regis1 from "../assets/images/registergrp.png";
 import "./Registrationfees.css";
+
 const Registrationfees = () => {
   return (
     <div>
@@ -12,8 +14,11 @@ const Registrationfees = () => {
           Registration Fees.
         </h2>
       </div>
+      <div className="image-container">
+        <img src={regis1} alt="about" className="about-image" />
+      </div>
 
-      <div className="rf-rules">
+      {/*<div className="rf-rules">
         <h2 className="rfimg-title" id="regpol">
           Registration Policy
         </h2>
@@ -80,7 +85,7 @@ const Registrationfees = () => {
           <img className="rf-img2" src={feeqr} alt="feeqr" />
         </div>
         <hr></hr>
-      </div>
+              </div>*/}
       <Footer />
     </div>
   );

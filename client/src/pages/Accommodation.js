@@ -1,14 +1,18 @@
 import React from "react";
 import "./Accommodation.css";
 import Footer from "../Components/Footer/Footer";
+import ac1 from "../assets/images/accgrp.png";
 
 const Accomodation = () => {
   return (
     <div>
-      <div id="acc-intro">
-        <h2 id="acc-heading">Accommodation</h2>
+      <div className="acc-intro">
+        <h2 className="acc-heading">Accommodation</h2>
       </div>
-      <div className="acc-body">
+      <div className="image-container">
+        <img src={ac1} alt="about" className="about-image" />
+      </div>
+      {/*<div className="acc-body">
         <div className="acc-heading2">
           <div className="section-container">
             <div>
@@ -42,7 +46,7 @@ const Accomodation = () => {
             </div>
           </div>
         </div>
-      </div>
+  </div>*/}
       <Footer />
     </div>
   );
