@@ -366,6 +366,18 @@ const Form = (props) => {
           />
         </label>
 
+        <label className="form-label">
+          Captain PhoneNo: <span className="-field">*</span>
+          <input
+            className="form-input"
+            type="tel"
+            name="captainno"
+            value={formData.captainno}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+
         {renderPlayerInputs()}
 
         <button
