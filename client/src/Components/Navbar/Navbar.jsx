@@ -75,10 +75,16 @@ const Navbar = () => {
               Sports
             </Link>
           </div>
-*/}
+
           <div>
             <Link to="/register" className="nav-link register-button">
               Register Now
+            </Link>
+          </div>
+          */}
+          <div>
+            <Link to="/" className="nav-link register-button">
+              Register is on HOLD
             </Link>
           </div>
         </div>
