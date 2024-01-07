@@ -20,7 +20,6 @@ const Admin = () => {
 
       {selectedSportDetails && (
         <div>
-          
           <h2>Selected Sport Details</h2>
 
           {/* Display general information */}
@@ -44,6 +43,11 @@ const Admin = () => {
           <div>
             <strong>Captain's Mail:</strong>{" "}
             {selectedSportDetails[0].captainMail}
+          </div>
+
+          <div>
+            <strong>Captain's Phone Number:</strong>{" "}
+            {selectedSportDetails[0].captainPhone}
           </div>
           {/* Display player details */}
           <ul>
