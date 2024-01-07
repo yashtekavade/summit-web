@@ -152,6 +152,7 @@ const Form = (props) => {
               name={`playerName${i}`}
               value={formData[`playerName${i}`]}
               onChange={handleInputChange}
+              required
             />
           </label>
 
@@ -163,6 +164,7 @@ const Form = (props) => {
               name={`playerEmail${i}`}
               value={formData[`playerEmail${i}`]}
               onChange={handleInputChange}
+              required
             />
           </label>
 
@@ -174,6 +176,7 @@ const Form = (props) => {
               name={`playerPhone${i}`}
               value={formData[`playerPhone${i}`]}
               onChange={handleInputChange}
+              required
             />
           </label>
         </div>
