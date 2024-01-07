@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Components/Footer/Footer";
 import "./About.css";
-import a1 from "../assets/images/aboutgrp.png";
+import a1 from "../assets/images/aboutgrp.webp";
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
         </p>
       </div>
       <div className="image-container">
-        <img src={a1} alt="about" className="about-image" />
+        <img src={a1} alt="about" className="about-image" loading="lazy" />
       </div>
       <Footer />
     </div>
