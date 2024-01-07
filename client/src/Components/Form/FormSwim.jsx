@@ -333,6 +333,18 @@ const Form = (props) => {
         </label>
 
         <label className="form-label">
+          Captain PhoneNo: <span className="-field">*</span>
+          <input
+            className="form-input"
+            type="tel"
+            name="captainno"
+            value={formData.captainno}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+
+        <label className="form-label">
           Select Sports
           <select
             className="form-select"
@@ -380,6 +392,8 @@ const Form = (props) => {
         >
           Upload ScreenShot (Required)
         </button>
+
+        <h1 className="heading">DON'T SPAM CLICK SUBMIT BUTTON </h1>
 
         <button className="form-button" type="submit">
           Submit

@@ -30,6 +30,7 @@ const sportsPlayerCount = {
 
 const Form = (props) => {
   const navigate = useNavigate();
+  const [isSubmitting, setSubmitting] = useState(false);
   const initialFormData = {
     collegeName: "",
     collegeType: "",
@@ -80,6 +81,9 @@ const Form = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Disable the submit button to prevent multiple submissions
+    setSubmitting(true);
+
     // Create a FormData object to handle both text and image data
     const formDataWithImage = new FormData();
 
@@ -104,22 +108,27 @@ const Form = (props) => {
       if (toast.success) {
         toast.success("Form submitted successfully!");
 
+        // Navigate to the homepage immediately
+        navigate("/");
+
+        // Add a timeout to enable the submit button after 4 minutes (240,000 milliseconds)
         setTimeout(() => {
-          navigate("/");
-        });
+          setSubmitting(false); // Enable the submit button after the timeout
+        }, 240000); // Adjust the timeout duration as needed
       }
 
-      // Add additional logic for handling the response, displaying success message, etc.
+      // Additional logic for handling the response, displaying success message, etc.
     } catch (error) {
       console.error("Error submitting form:", error);
 
       // Display error toast
       toast.error("Error submitting form. Please try again.");
 
-      // Add additional logic for handling the error, displaying error message, etc.
-    }
+      // Enable the submit button in case of an error
+      setSubmitting(false);
 
-    console.log(formData);
+      // Additional logic for handling the error, displaying error message, etc.
+    }
   };
 
   const renderPlayerInputs = () => {
@@ -357,6 +366,18 @@ const Form = (props) => {
           />
         </label>
 
+        <label className="form-label">
+          Captain PhoneNo: <span className="-field">*</span>
+          <input
+            className="form-input"
+            type="tel"
+            name="captainno"
+            value={formData.captainno}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+
         {renderPlayerInputs()}
 
         <button
@@ -384,6 +405,7 @@ const Form = (props) => {
         >
           Upload ScreenShot (Required)
         </button>
+        <h1 className="heading">DON'T SPAM CLICK SUBMIT BUTTON </h1>
 
         <button className="form-button" type="submit">
           Submit
