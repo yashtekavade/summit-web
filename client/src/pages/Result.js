@@ -1,6 +1,4 @@
-// Result.jsx
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./Result.css";
 
@@ -21,7 +19,10 @@ const Result = () => {
   return (
     <div className="result-frame">
       <div className="Result-body">
-        <h1 className="result-heading">Results for {state.sportsConfirm}</h1>
+        <h1 className="result-heading">Results for {state.sports}</h1>
+        <div className="sports-heading">
+          <h2>{state.sports}</h2>
+        </div>
         <div className="college-tiles">
           {collegeDetailsArray.map((college) => (
             <div

@@ -20,6 +20,7 @@ const Admin = () => {
 
       {selectedSportDetails && (
         <div>
+          
           <h2>Selected Sport Details</h2>
 
           {/* Display general information */}
@@ -36,7 +37,14 @@ const Admin = () => {
           <div>
             <strong>College Type:</strong> {selectedSportDetails[0].collegeType}
           </div>
-
+          <div>
+            <strong>Captain's Name:</strong>{" "}
+            {selectedSportDetails[0].captainDetails}
+          </div>
+          <div>
+            <strong>Captain's Mail:</strong>{" "}
+            {selectedSportDetails[0].captainMail}
+          </div>
           {/* Display player details */}
           <ul>
             {[...Array(16).keys()].map((playerIndex) => (
