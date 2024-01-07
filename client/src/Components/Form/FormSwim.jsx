@@ -344,6 +344,9 @@ const Form = (props) => {
             required
           />
         </label>
+        <h1 className="heading">
+          FILL UPTO THIS POINT IF YOUR TEAM ISN'T READY{" "}
+        </h1>
 
         <label className="form-label">
           Select Sports

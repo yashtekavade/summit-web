@@ -379,6 +379,10 @@ const Form = (props) => {
           />
         </label>
 
+        <h1 className="heading">
+          FILL UPTO THIS POINT IF YOUR TEAM ISN'T READY{" "}
+        </h1>
+
         {renderPlayerInputs()}
 
         <button
