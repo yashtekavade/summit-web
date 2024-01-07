@@ -100,7 +100,7 @@ const Form = (props) => {
 
         setTimeout(() => {
           navigate("/");
-        }, 2000);
+        });
       }
 
       // Add additional logic for handling the response, displaying success message, etc.
