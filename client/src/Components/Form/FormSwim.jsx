@@ -22,7 +22,7 @@ const Form = (props) => {
     inchargeDetails: "",
     captainDetails: "",
     captainMail: "",
-    captainPhone: "",
+    captainno: "",
     playerName1: "",
     playerEmail1: "",
     playerPhone1: "",

@@ -55,7 +55,7 @@ const Result = () => {
                     <strong>Captain Email:</strong> {college.captainMail}
                   </p>
                   <p>
-                    <strong>Captain Number:</strong> {college.captainPhone}
+                    <strong>Captain Number:</strong> {college.captainno}
                   </p>
                   <p>
                     <strong>Incharge Details:</strong> {college.inchargeDetails}

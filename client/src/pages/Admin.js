@@ -47,7 +47,7 @@ const Admin = () => {
 
           <div>
             <strong>Captain's Phone Number:</strong>{" "}
-            {selectedSportDetails[0].captainPhone}
+            {selectedSportDetails[0].captainno}
           </div>
           {/* Display player details */}
           <ul>
