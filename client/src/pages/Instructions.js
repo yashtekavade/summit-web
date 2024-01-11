@@ -8,7 +8,7 @@ const Instructions = () => {
     <div>
       <div className="inst-intro">
         <div className="inst-heading">
-          <h1>Instructions For MIT- WPU Summit 2021</h1>
+          <h1>Instructions For MIT- WPU Summit 2024</h1>
         </div>
       </div>
       <div className="image-container">
