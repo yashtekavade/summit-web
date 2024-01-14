@@ -248,7 +248,7 @@ const Form = (props) => {
             <option value="">Select Sport</option>
             <option value="Football(M)">Football (M)</option>
             <option value="Football(W)">Football (W)</option>
-            <option value="Cricket(M)">Cricket (M)</option>
+            {/* <option value="Cricket(M)">Cricket (M)</option> */}
             <option value="Basketball(M)">Basketball (M)</option>
             <option value="Basketball(W)">Basketball (W)</option>
             <option value="Volleyball(M)">Volleyball (M)</option>
