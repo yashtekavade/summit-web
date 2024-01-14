@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../Components/Footer/Footer";
-import i1 from "../assets/images/ingrp.png";
+import i1 from "../assets/images/ingrp.webp";
 import "./Instructions.css";
 
 const Instructions = () => {
@@ -8,7 +8,7 @@ const Instructions = () => {
     <div>
       <div className="inst-intro">
         <div className="inst-heading">
-          <h1>Instructions For MIT- WPU Summit 2021</h1>
+          <h1>Instructions For MIT- WPU Summit 2024</h1>
         </div>
       </div>
       <div className="image-container">

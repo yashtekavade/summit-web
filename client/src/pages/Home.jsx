@@ -2,9 +2,9 @@ import React from "react";
 import Navbar from "../Components/Navbar/Navbar.jsx";
 import "./Home.css";
 import { saveAs } from "file-saver";
-import AboutImg from "../assets/images/me.jpg";
-import Founder from "../assets/images/karad.png";
-import Exe from "../assets/images/exe.png";
+import AboutImg from "../assets/images/me.webp";
+import Founder from "../assets/images/karad.webp";
+import Exe from "../assets/images/exe.webp";
 import videoPath from "../assets/images/mitwpusummit.mp4";
 import Footer from "../Components/Footer/Footer.jsx";
 import Foot from "../assets/brand/fp2.png";
@@ -41,7 +41,7 @@ const Home = () => {
           </button>
         </div>
         <div className="img-container">
-          <img className="img" src={AboutImg} alt="about" />
+          <img className="img" src={AboutImg} alt="about" loading="lazy" />
         </div>
       </div>
 
@@ -68,7 +68,7 @@ const Home = () => {
           </p>
         </div>
         <div className="img-container">
-          <img className="img_b" src={Founder} alt="about" />
+          <img className="img_b" src={Founder} alt="about" loading="lazy" />
         </div>
       </div>
 
@@ -94,7 +94,7 @@ const Home = () => {
           </p>
         </div>
         <div className="img-container">
-          <img className="img_c" src={Exe} alt="about" />
+          <img className="img_c" src={Exe} alt="about" loading="lazy" />
         </div>
       </div>
       <Footer />

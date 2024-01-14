@@ -1,7 +1,7 @@
 import React from "react";
 import "./Accommodation.css";
 import Footer from "../Components/Footer/Footer";
-import ac1 from "../assets/images/accgrp.png";
+import ac1 from "../assets/images/accgrp.webp";
 
 const Accomodation = () => {
   return (

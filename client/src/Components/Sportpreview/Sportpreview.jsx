@@ -1,5 +1,8 @@
 import React from "react";
 import "./Sportpreview.css";
+import c1 from "../../assets/images/sports/1.JPG";
+import c2 from "../../assets/images/sports/2.JPG";
+import c3 from "../../assets/images/sports/3.JPG";
 
 const Sportpreview = () => {
   return (
@@ -11,49 +14,13 @@ const Sportpreview = () => {
         <span className="sportpreview-text"></span>
         <div className="gallery">
           <span style={{ "--i": 1 }}>
-            <img
-              src="https://images4.alphacoders.com/678/thumb-1920-678317.jpg"
-              alt=""
-            />
+            <img src={c1} alt="h" />
           </span>
           <span style={{ "--i": 2 }}>
-            <img src="https://images5.alphacoders.com/653/653698.jpg" alt="" />
+            <img src={c2} alt="j" />
           </span>
           <span style={{ "--i": 3 }}>
-            <img
-              src="https://images6.alphacoders.com/803/thumb-1920-803643.png"
-              alt=""
-            />
-          </span>
-          <span style={{ "--i": 4 }}>
-            <img
-              src="https://images.alphacoders.com/785/thumb-1920-785833.png"
-              alt=""
-            />
-          </span>
-          <span style={{ "--i": 5 }}>
-            <img
-              src="https://images6.alphacoders.com/749/thumb-1920-749966.png"
-              alt=""
-            />
-          </span>
-          <span style={{ "--i": 6 }}>
-            <img
-              src="https://images4.alphacoders.com/761/thumb-1920-761076.png"
-              alt=""
-            />
-          </span>
-          <span style={{ "--i": 7 }}>
-            <img
-              src="https://images.alphacoders.com/682/thumb-1920-682570.png"
-              alt=""
-            />
-          </span>
-          <span style={{ "--i": 8 }}>
-            <img
-              src="https://images4.alphacoders.com/866/thumb-1920-866812.png"
-              alt=""
-            />
+            <img src={c3} alt="k" />
           </span>
         </div>
       </div>
