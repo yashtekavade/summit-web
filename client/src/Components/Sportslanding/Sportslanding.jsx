@@ -33,8 +33,8 @@ const Sportslanding = () => {
           />
           <SportsCard
             title="Football Women"
-            subtitle="Rs. 3,000/-"
-            link="/register/Football(W)"
+            subtitle="Registration CLOSED"
+            link=""
           />
           <SportsCard
             title="Basketball Men"
