@@ -34,11 +34,11 @@ const Navbar = () => {
               <Link to="/minister-message" className="dropdown-link">
                 Sport's Minister Message
               </Link>
-              {/*
+              
               <Link to="/organising-team" className="dropdown-link">
                 Organising Team
               </Link>
-              <Link to="/event-head" className="dropdown-link">
+              {/* <Link to="/event-head" className="dropdown-link">
                 Event Head
               </Link>
   */}

@@ -1,14 +1,14 @@
 .org-title {
   font-family: "Poppins", sans-serif;
   margin-top: 8rem;
-  font-size: 4rem;
+  font-size: 6rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
   color: white !important;
 }
 
 .org-div {
-  height: 30rem;
+  height: 40rem;
   width: 100%;
   display: flex;
   flex-direction: column;
