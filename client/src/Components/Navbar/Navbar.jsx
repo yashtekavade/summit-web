@@ -78,8 +78,8 @@ const Navbar = () => {
                     */}
 
           <div>
-            <Link to="/register" className="nav-link register-button">
-              Register Now
+            <Link to="/" className="nav-link register-button">
+              Register Closed
             </Link>
           </div>
           {/*}
