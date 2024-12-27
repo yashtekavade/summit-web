@@ -23,18 +23,18 @@ const Sportslanding = () => {
         <div className="sports-list">
           <SportsCard
             title="Cricket (M)"
-            subtitle="  Registration CLOSED"
-            link=""
+            subtitle="Rs. 2,500/-"
+            link="/register/Cricket(M)"
           />
           <SportsCard
             title="Football Men"
-            subtitle="Registration CLOSED"
-            link=""
+            subtitle="Rs. 2,500/-"
+            link="/register/Football(M)"
           />
           <SportsCard
             title="Football Women"
-            subtitle="Registration CLOSED"
-            link=""
+            subtitle="Rs. 2,500/-"
+            link="/register/Football(W)"
           />
           <SportsCard
             title="Basketball Men"
@@ -82,16 +82,6 @@ const Sportslanding = () => {
             link="/register/TableTennis(W)"
           />
           <SportsCard
-            title="Lawn Tennis Men"
-            subtitle="Rs. 1,800/-"
-            link="/register/LawnTennis(M)"
-          />
-          <SportsCard
-            title="Lawn Tennis Women"
-            subtitle="Rs. 1,400/-"
-            link="/register/LawnTennis(W)"
-          />
-          <SportsCard
             title="Chess Men"
             subtitle="Rs. 1,200/-"
             link="/register/Chess(M)"
@@ -102,34 +92,17 @@ const Sportslanding = () => {
             link="/register/Chess(W)"
           />
           <SportsCard
-            title="Swimming Men"
-            subtitle={
-              <>
-                Rs. 300/- Event;
-                <br />
-                Rs. 500/- Relay
-              </>
-            }
-            link="/register/Swimming(W)"
-          />
-          <SportsCard
-            title="Swimming Women"
-            subtitle={
-              <>
-                Rs. 300/- Event;
-                <br />
-                Rs. 500/- Relay
-              </>
-            }
-            link="/register/Swimming(W)"
-          />
-          <SportsCard
             title="Esports BGMI"
             subtitle="Rs. 500/- Per team"
             link="/register/Esports_BGMI"
           />
           <SportsCard
             title="Esports Valorant"
+            subtitle="Rs. 500/- Per team"
+            link="/register/Esports_Valorant"
+          />
+          <SportsCard
+            title="Esports EA FIFA"
             subtitle="Rs. 500/- Per team"
             link="/register/Esports_Valorant"
           />
