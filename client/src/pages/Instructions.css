@@ -46,3 +46,10 @@
   word-wrap: break-word;
   margin-left: 2rem;
 }
+
+#instructions-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
