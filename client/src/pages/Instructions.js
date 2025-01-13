@@ -1,13 +1,13 @@
 import React from "react";
 import Footer from "../Components/Footer/Footer";
-import i1 from "../assets/images/inst1.png";
+import i1 from "./instructions.jpeg";
 import "./Instructions.css";
 
 const Instructions = () => {
   return (
     <div>
 
-      <div className="image-container">
+      <div className="image-container" id="instructions-img-container">
         <img src={i1} alt="about" className="about-image" />
       </div>
       {/*
