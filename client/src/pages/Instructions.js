@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../Components/Footer/Footer";
-import i1 from "../assets/images/inst4.png";
+import i1 from "../assets/images/inst1.png";
 import "./Instructions.css";
 
 const Instructions = () => {

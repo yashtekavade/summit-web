@@ -1,74 +1,51 @@
-/* src/components/Login.css */
-.login-container {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .login-form-container {
-    margin-left: 4rem;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    margin-bottom: 3rem;
-  }
-  
-  .login-heading {
-    margin-top: 12rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  
-  .login-label {
-    margin-bottom: 8px;
-  }
-  
-  .login-input {
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .login-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .login-button:hover {
-    background-color: #45a049;
-  }
-  
-  .login-message {
-    text-align: center;
-    margin-top: 16px;
-    color: #333;
-    clear: both;
-    display: block;  
+.instructions-container {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
-  
-  .login-link {
-    color: #4caf50;
-    text-decoration: none;
-  }
-  
-  .login-link:hover {
-    text-decoration: underline;
-  }
-  
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 15px;
+}
+
+.content-heading {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #f2a61e;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content-list {
+  list-style-type: disc;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.8;
+  color: #f2a61e;
+  margin-left: 1.5rem;
+  padding: 0;
+}
+
+.content-list li {
+  margin-bottom: 0.8rem;
+}
