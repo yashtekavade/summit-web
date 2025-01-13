@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/LOGO/mixedd.png";
+import logo from "../../assets/LOGO/finallogo.png";
 import brochurePath from "./Summit Brouchure.pdf";
 
 const Navbar = () => {

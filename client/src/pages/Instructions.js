@@ -1,17 +1,13 @@
 import React from "react";
 import Footer from "../Components/Footer/Footer";
-import i1 from "../assets/images/ingrp.webp";
+import i1 from "./instructions.jpeg";
 import "./Instructions.css";
 
 const Instructions = () => {
   return (
     <div>
-      <div className="inst-intro">
-        <div className="inst-heading">
-          <h1>Instructions For MIT- WPU Summit 2024</h1>
-        </div>
-      </div>
-      <div className="image-container">
+
+      <div className="image-container" id="instructions-img-container">
         <img src={i1} alt="about" className="about-image" />
       </div>
       {/*

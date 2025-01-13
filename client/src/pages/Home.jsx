@@ -5,7 +5,7 @@ import { saveAs } from "file-saver";
 import AboutImg from "../assets/images/me.webp";
 import Founder from "../assets/images/karad.webp";
 import Exe from "../assets/images/exe.webp";
-import videoPath from "../assets/images/mitwpusummit.mp4";
+import videoPath from "../assets/images/finalintro(1).mp4";
 import Footer from "../Components/Footer/Footer.jsx";
 import Foot from "../assets/brand/fp2.png";
 
