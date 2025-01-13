@@ -1,9 +1,7 @@
 import React from "react";
-import feeimg from "../assets/images/fees.png";
-import feeqr from "../assets/images/feeqr.png";
 import Footer from "../Components/Footer/Footer";
-import regis1 from "../assets/images/registergrp.webp";
 import "./Registrationfees.css";
+import regis1 from "../assets/images/sports/fee1.jpg";
 
 const Registrationfees = () => {
   return (

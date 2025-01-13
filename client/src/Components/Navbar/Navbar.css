@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white; /* Set background color */
+  background-color: #f2a61e;
   z-index: 1000; /* Ensure the navbar appears above other elements */
 }
 

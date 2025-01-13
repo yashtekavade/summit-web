@@ -26,7 +26,7 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2">
+            className="absolute bottom-full mb-2 inset-x-0 flex flex-row gap-2 justify-center">
             {items.map((item, idx) => (
               <motion.div
                 key={item.title}
@@ -44,7 +44,7 @@ const FloatingDockMobile = ({
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}>
                 <Link
-                  to={item.href} // Updated from "href" to "to" for React Router
+                  to={item.href}
                   key={item.title}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center">
                   <div className="h-4 w-4">{item.icon}</div>
@@ -63,6 +63,7 @@ const FloatingDockMobile = ({
   );
 };
 
+
 const FloatingDockDesktop = ({
   items,
   className
@@ -73,8 +74,8 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
-        className
+        "mx-auto hidden md:flex h-16 gap-4 items-center justify-center rounded-2xl bg-transparent px-4",
+        className // Removed `pb-3` and `bg-gray-50` classes
       )}>
       {items.map((item) => (
         <IconContainer mouseX={mouseX} key={item.title} {...item} />
@@ -82,6 +83,7 @@ const FloatingDockDesktop = ({
     </motion.div>)
   );
 };
+
 
 function IconContainer({
   mouseX,
